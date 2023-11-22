@@ -41,7 +41,6 @@
         <Variations>Nothing</Variations>
         <Compositions>
           <Composition>formControlKeyPair</Composition>
-          <Composition>formControlValidation</Composition>
         </Compositions>
         <AllowedTemplates />
         <DefaultTemplate></DefaultTemplate>
@@ -76,8 +75,8 @@
     </DocumentType>
     <DocumentType Folders="Custom+Form+Builder/Controls/Components" FolderKeys="3387d083-4b80-4c89-b37f-cf2e8908563a/3a63012d-44c4-48d9-98e7-0041a2bab939/bbdb2be1-64d1-419f-9c62-dc399700ee49">
       <Info>
-        <Name>Form Control - Common</Name>
-        <Alias>formControlValidation</Alias>
+        <Name>Form Settings - Common</Name>
+        <Alias>formSettingsCommon</Alias>
         <Key>725975f0-9da9-4f3d-bf11-1ba79d8805d1</Key>
         <Icon>icon-defrag</Icon>
         <Thumbnail>folder.png</Thumbnail>
@@ -93,29 +92,29 @@
       <Structure />
       <GenericProperties>
         <GenericProperty>
-          <Name>Pattern</Name>
-          <Alias>formControlPattern</Alias>
-          <Key>3c301088-fa23-44b1-a039-fa0afe2c99a3</Key>
-          <Type>Umbraco.TextBox</Type>
-          <Definition>0cc0eba1-9960-42c9-bf9b-60e150b429ae</Definition>
-          <Tab Alias="control">Control</Tab>
-          <SortOrder>10</SortOrder>
-          <Mandatory>False</Mandatory>
-          <LabelOnTop>False</LabelOnTop>
-          <Description><![CDATA[Regex pattern to validatate the field]]></Description>
-          <Variations>Nothing</Variations>
-        </GenericProperty>
-        <GenericProperty>
           <Name>Placeholder</Name>
           <Alias>formControlPlaceholder</Alias>
           <Key>92638f2e-e7a0-43c3-96cf-d4ae44f3d827</Key>
           <Type>Umbraco.TextBox</Type>
           <Definition>0cc0eba1-9960-42c9-bf9b-60e150b429ae</Definition>
-          <Tab Alias="control">Control</Tab>
-          <SortOrder>11</SortOrder>
+          <Tab Alias="attributes">Attributes</Tab>
+          <SortOrder>3</SortOrder>
           <Mandatory>False</Mandatory>
           <LabelOnTop>False</LabelOnTop>
           <Description><![CDATA[Placeholder text]]></Description>
+          <Variations>Nothing</Variations>
+        </GenericProperty>
+        <GenericProperty>
+          <Name>Pattern</Name>
+          <Alias>formControlPattern</Alias>
+          <Key>3c301088-fa23-44b1-a039-fa0afe2c99a3</Key>
+          <Type>Umbraco.TextBox</Type>
+          <Definition>0cc0eba1-9960-42c9-bf9b-60e150b429ae</Definition>
+          <Tab Alias="attributes">Attributes</Tab>
+          <SortOrder>4</SortOrder>
+          <Mandatory>False</Mandatory>
+          <LabelOnTop>False</LabelOnTop>
+          <Description><![CDATA[Regex pattern to validatate the field]]></Description>
           <Variations>Nothing</Variations>
         </GenericProperty>
         <GenericProperty>
@@ -124,8 +123,8 @@
           <Key>4f02dc73-6817-494f-9e39-320b07372b44</Key>
           <Type>Umbraco.TextBox</Type>
           <Definition>0cc0eba1-9960-42c9-bf9b-60e150b429ae</Definition>
-          <Tab Alias="control">Control</Tab>
-          <SortOrder>12</SortOrder>
+          <Tab Alias="attributes">Attributes</Tab>
+          <SortOrder>5</SortOrder>
           <Mandatory>False</Mandatory>
           <LabelOnTop>False</LabelOnTop>
           <Description><![CDATA[Text to display beneath the form control]]></Description>
@@ -134,12 +133,12 @@
       </GenericProperties>
       <Tabs>
         <Tab>
-          <Id>124</Id>
-          <Key>ad6730ba-358c-4c08-b008-74108191ed1b</Key>
-          <Type>Tab</Type>
-          <Caption>Control</Caption>
-          <Alias>control</Alias>
-          <SortOrder>10</SortOrder>
+          <Id>131</Id>
+          <Key>93db8de3-cf35-406a-99a7-841deffa95c2</Key>
+          <Type>Group</Type>
+          <Caption>Attributes</Caption>
+          <Alias>attributes</Alias>
+          <SortOrder>11</SortOrder>
         </Tab>
       </Tabs>
       <HistoryCleanupPolicy preventCleanup="false" />
@@ -156,9 +155,7 @@
         <IsListView>False</IsListView>
         <IsElement>True</IsElement>
         <Variations>Nothing</Variations>
-        <Compositions>
-          <Composition>formControlValidation</Composition>
-        </Compositions>
+        <Compositions />
         <AllowedTemplates />
         <DefaultTemplate></DefaultTemplate>
       </Info>
@@ -171,7 +168,7 @@
           <Type>Umbraco.DropDown.Flexible</Type>
           <Definition>75841b98-13ce-4a45-bea1-1bd6072d0518</Definition>
           <Tab Alias="control">Control</Tab>
-          <SortOrder>-1</SortOrder>
+          <SortOrder>0</SortOrder>
           <Mandatory>False</Mandatory>
           <LabelOnTop>False</LabelOnTop>
           <Variations>Nothing</Variations>
@@ -354,9 +351,7 @@
         <IsListView>False</IsListView>
         <IsElement>True</IsElement>
         <Variations>Nothing</Variations>
-        <Compositions>
-          <Composition>formControlValidation</Composition>
-        </Compositions>
+        <Compositions />
         <AllowedTemplates />
         <DefaultTemplate></DefaultTemplate>
       </Info>
@@ -414,7 +409,6 @@
         <IsElement>True</IsElement>
         <Variations>Nothing</Variations>
         <Compositions>
-          <Composition>formControlValidation</Composition>
           <Composition>formControlKeyPair</Composition>
         </Compositions>
         <AllowedTemplates />
@@ -437,9 +431,7 @@
         <IsListView>False</IsListView>
         <IsElement>True</IsElement>
         <Variations>Nothing</Variations>
-        <Compositions>
-          <Composition>formControlValidation</Composition>
-        </Compositions>
+        <Compositions />
         <AllowedTemplates />
         <DefaultTemplate></DefaultTemplate>
       </Info>
@@ -452,7 +444,7 @@
           <Type>Umbraco.Integer</Type>
           <Definition>2e6d3631-066e-44b8-aec4-96f09099b2b5</Definition>
           <Tab Alias="control">Control</Tab>
-          <SortOrder>3</SortOrder>
+          <SortOrder>0</SortOrder>
           <Mandatory>False</Mandatory>
           <LabelOnTop>False</LabelOnTop>
           <Description><![CDATA[No. of rows in the textarea]]></Description>
@@ -505,7 +497,6 @@
         <IsElement>True</IsElement>
         <Variations>Nothing</Variations>
         <Compositions>
-          <Composition>formControlValidation</Composition>
           <Composition>formControlLimits</Composition>
         </Compositions>
         <AllowedTemplates />
@@ -553,7 +544,6 @@
         <Variations>Nothing</Variations>
         <Compositions>
           <Composition>formControlLimits</Composition>
-          <Composition>formControlValidation</Composition>
         </Compositions>
         <AllowedTemplates />
         <DefaultTemplate></DefaultTemplate>
@@ -598,9 +588,7 @@
         <IsListView>False</IsListView>
         <IsElement>True</IsElement>
         <Variations>Nothing</Variations>
-        <Compositions>
-          <Composition>formControlValidation</Composition>
-        </Compositions>
+        <Compositions />
         <AllowedTemplates />
         <DefaultTemplate></DefaultTemplate>
       </Info>
@@ -613,7 +601,7 @@
           <Type>Umbraco.TextBox</Type>
           <Definition>0cc0eba1-9960-42c9-bf9b-60e150b429ae</Definition>
           <Tab Alias="control">Control</Tab>
-          <SortOrder>3</SortOrder>
+          <SortOrder>0</SortOrder>
           <Mandatory>False</Mandatory>
           <LabelOnTop>False</LabelOnTop>
           <Description><![CDATA[takes a comma-separated list of allowed file extensions or MIME types. Some examples: 
@@ -629,7 +617,7 @@ accept="image/png, image/jpeg" or accept=".png,]]></Description>
           <Type>Umbraco.TextBox</Type>
           <Definition>0cc0eba1-9960-42c9-bf9b-60e150b429ae</Definition>
           <Tab Alias="control">Control</Tab>
-          <SortOrder>4</SortOrder>
+          <SortOrder>1</SortOrder>
           <Mandatory>False</Mandatory>
           <LabelOnTop>False</LabelOnTop>
           <Description><![CDATA[Path to upload files]]></Description>
@@ -660,7 +648,9 @@ accept="image/png, image/jpeg" or accept=".png,]]></Description>
         <IsListView>False</IsListView>
         <IsElement>True</IsElement>
         <Variations>Nothing</Variations>
-        <Compositions />
+        <Compositions>
+          <Composition>formSettingsCommon</Composition>
+        </Compositions>
         <AllowedTemplates />
         <DefaultTemplate></DefaultTemplate>
       </Info>
@@ -686,7 +676,7 @@ accept="image/png, image/jpeg" or accept=".png,]]></Description>
           <Type>Umbraco.TextBox</Type>
           <Definition>1daaca9d-56e3-4d94-bd58-ed7980537ca6</Definition>
           <Tab Alias="attributes">Attributes</Tab>
-          <SortOrder>2</SortOrder>
+          <SortOrder>1</SortOrder>
           <Mandatory>False</Mandatory>
           <LabelOnTop>False</LabelOnTop>
           <Description><![CDATA[Label for the form control]]></Description>
@@ -699,7 +689,7 @@ accept="image/png, image/jpeg" or accept=".png,]]></Description>
           <Type>Umbraco.TrueFalse</Type>
           <Definition>92897bc6-a5f3-4ffe-ae27-f2e7e33dda49</Definition>
           <Tab Alias="attributes">Attributes</Tab>
-          <SortOrder>3</SortOrder>
+          <SortOrder>2</SortOrder>
           <Mandatory>False</Mandatory>
           <LabelOnTop>False</LabelOnTop>
           <Description><![CDATA[Control is mandatory]]></Description>
@@ -712,7 +702,7 @@ accept="image/png, image/jpeg" or accept=".png,]]></Description>
           <Type>Umbraco.TextBox</Type>
           <Definition>0cc0eba1-9960-42c9-bf9b-60e150b429ae</Definition>
           <Tab Alias="attributes">Attributes</Tab>
-          <SortOrder>4</SortOrder>
+          <SortOrder>6</SortOrder>
           <Mandatory>False</Mandatory>
           <LabelOnTop>False</LabelOnTop>
           <Description><![CDATA[Message to display if validation fails]]></Description>
@@ -725,7 +715,7 @@ accept="image/png, image/jpeg" or accept=".png,]]></Description>
           <Type>Umbraco.TextBox</Type>
           <Definition>1daaca9d-56e3-4d94-bd58-ed7980537ca6</Definition>
           <Tab Alias="attributes">Attributes</Tab>
-          <SortOrder>5</SortOrder>
+          <SortOrder>7</SortOrder>
           <Mandatory>False</Mandatory>
           <LabelOnTop>False</LabelOnTop>
           <Description><![CDATA[custom classes, they will be appended to the control class]]></Description>
@@ -738,7 +728,7 @@ accept="image/png, image/jpeg" or accept=".png,]]></Description>
           <Type>Umbraco.TrueFalse</Type>
           <Definition>8740cd33-d2b7-4a6e-ab6f-cfecc463b766</Definition>
           <Tab Alias="attributes">Attributes</Tab>
-          <SortOrder>6</SortOrder>
+          <SortOrder>8</SortOrder>
           <Mandatory>False</Mandatory>
           <LabelOnTop>False</LabelOnTop>
           <Variations>Nothing</Variations>
@@ -751,7 +741,7 @@ accept="image/png, image/jpeg" or accept=".png,]]></Description>
           <Type>Group</Type>
           <Caption>Attributes</Caption>
           <Alias>attributes</Alias>
-          <SortOrder>0</SortOrder>
+          <SortOrder>11</SortOrder>
         </Tab>
       </Tabs>
       <HistoryCleanupPolicy preventCleanup="false" />
@@ -1104,37 +1094,7 @@ i.e. /umbraco/surface/formssurface/SubmitTestForm]]></Description>
   <Templates />
   <Stylesheets />
   <Scripts />
-  <PartialViews>
-    <View path="blockgrid\form.cshtml"><![CDATA[@using Umbraco.Community.BlockPreview.Extensions
-@using Project1.Controllers
-@using Our.Umbraco.TagHelpers
-@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<Umbraco.Cms.Core.Models.Blocks.BlockGridItem>
-
-@{
-    var  dataAreas = "";
-    foreach (var area in Model.Areas)
-    {
-        dataAreas += area.Alias + " ";
-    }
-    var formSettings = (dynamic)Model.Settings;
-}
-<!-- START - AREAS -->
-<div class="areas grid container" data-areas="@dataAreas" data-ContentUdi="@Model.ContentUdi" data-Content="@Model.Content" data-GridColumns="@Model.GridColumns">
-    <!-- Form wrapper -->
-    @using (Html.BeginUmbracoForm<FormsSurfaceController>((string)formSettings.FormAction, null, new { @class = "g-col-12 needs-validation", action = formSettings.FormAction }, FormMethod.Post))
-    {
-        <legend our-if="@formSettings != null && @formSettings.FormDisplayLegend">@formSettings.FormTitle</legend>
-        @foreach (var area in Model.Areas)
-        {
-            @await Html.GetPreviewBlockGridItemAreaHtmlAsync(area)
-        }
-    }
-    <!-- end Form wrapper -->
-</div>
-<!-- END - AREAS -->
-
-]]></View>
-  </PartialViews>
+  <PartialViews />
   <Macros />
   <MacroPartialViews />
   <DictionaryItems />

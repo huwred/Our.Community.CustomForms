@@ -8,11 +8,11 @@
     var extraClass = Model.Settings.Value<string>("formControlClass");
     var errMessage = Model.Settings.Value<string>("formControlErrorMessage");
     var label = Model.Settings.Value<string>("formControlLabel");
+    var placeholder = Model.Settings.Value<string>("formControlPlaceholder");
+    var helptext = Model.Settings.Value<string>("formControlHelpText");
     string ariaId = "help_" + name;
 
     var field = Model.Content;
-    var placeholder = field.Value<string>("formControlPlaceholder");
-    var helptext = field.Value<string>("formControlHelpText");
 
     string max = field.Value<int>("formControlMax") > 0 ? $@"max=""{field.Value<int>("formControlMax")}""" : "";
     string rows = field.Value<string>("FormControlRows") ?? "4";

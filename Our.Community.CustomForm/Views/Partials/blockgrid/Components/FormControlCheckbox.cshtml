@@ -9,20 +9,10 @@
     var extraClass = Model.Settings.Value<string>("formControlClass");
     var errMessage = Model.Settings.Value<string>("formControlErrorMessage");
     var label = Model.Settings.Value<string>("formControlLabel");
+    var helptext = Model.Settings.Value<string>("formControlHelpText");
     string ariaId = "help_" + name;
 
     var field = Model.Content;
-    var hasValidator = !string.IsNullOrWhiteSpace(field.Value<string>("formControlPattern"));
-    var pattern = field.Value<string>("formControlPattern");
-    var inputtype = field.Value<string>("formControlType");
-
-    var placeholder = field.Value<string>("formControlPlaceholder");
-    var helptext = field.Value<string>("formControlHelpText");
-
-    var maxlen = field.Value<int>("formControlMax") > 0 ? $@"maxlength=""{field.Value<int>("formControlMax")}""" : "";
-    var minlen = field.Value<int>("formControlMin") > 0 ? $@"minlength=""{field.Value<int>("formControlMin")}""" : "";
-    string max = field.Value<int>("formControlMax") > 0 ? $@"max=""{field.Value<int>("formControlMax")}""" : "";
-    string min = field.Value<int>("formControlMin") > 0 ? $@"min=""{field.Value<int>("formControlMin")}""" : "";
 
     var dir = field.Value<string>("formControlLayout") == "Vertical" ? "" : "form-check-inline";
     string switchclass = "";

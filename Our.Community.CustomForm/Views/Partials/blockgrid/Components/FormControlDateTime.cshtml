@@ -9,15 +9,14 @@
     var extraClass = Model.Settings.Value<string>("formControlClass");
     var errMessage = Model.Settings.Value<string>("formControlErrorMessage");
     var label = Model.Settings.Value<string>("formControlLabel");
+    var hasValidator = !string.IsNullOrWhiteSpace(Model.Settings.Value<string>("formControlPattern"));
+    var pattern = Model.Settings.Value<string>("formControlPattern");
+    var placeholder = Model.Settings.Value<string>("formControlPlaceholder");
+    var helptext = Model.Settings.Value<string>("formControlHelpText");
     string ariaId = "help_" + name;
 
     var field = Model.Content;
-    var hasValidator = !string.IsNullOrWhiteSpace(field.Value<string>("formControlPattern"));
-    var pattern = field.Value<string>("formControlPattern");
     var inputtype = field.Value<string>("formControlType");
-
-    var placeholder = field.Value<string>("formControlPlaceholder");
-    var helptext = field.Value<string>("formControlHelpText");
 
 
     string mindate = field.Value<DateTime>("formControlMin") != DateTime.MinValue ? $@"min=""{field.Value<DateTime>("formControlMin")}""" : "";

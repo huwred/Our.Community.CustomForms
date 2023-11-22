@@ -8,10 +8,10 @@
     var extraClass = settings.Value<string>("formControlClass");
     var errMessage = settings.Value<string>("formControlErrorMessage");
     var label = Model.Settings.Value<string>("formControlLabel");
+    var helptext = Model.Settings.Value<string>("formControlHelpText");
     string ariaId = "help_" + name;
 
     var field = Model.Content;
-    var helptext = field.Value<string>("formControlHelpText");
 
     var accept = field.Value<string>("formControlAccept");
     var uploadpath = field.Value<string>("formControlUploadPath");

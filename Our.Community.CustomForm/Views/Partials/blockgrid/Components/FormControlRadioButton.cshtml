@@ -6,14 +6,13 @@
     string id = Model.Settings.Value<string>("formControlId").Replace(" ", "-", StringComparison.InvariantCulture);
     string name = Model.Settings.Value<string>("formControlId").Replace(" ", "", StringComparison.InvariantCulture);
     string required = Model.Settings.Value<bool>("formControlRequired") ? "required" : "";
-    var extraClass = Model.Settings.Value<string>("formControlClass");
     var errMessage = Model.Settings.Value<string>("formControlErrorMessage");
     var label = Model.Settings.Value<string>("formControlLabel");
+    var helptext = Model.Settings.Value<string>("formControlHelpText");
     string ariaId = "help_" + name;
 
     var field = Model.Content;
 
-    var helptext = field.Value<string>("formControlHelpText");
     var dir = Model.Settings.Value<string>("formControlLayout") == "Vertical" ? "" : "form-check-inline";
 
 }
