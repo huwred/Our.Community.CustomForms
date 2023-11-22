@@ -65,7 +65,7 @@ You can now start to add form controls to the template
 
 ![Form control blocks](images/formcontrolblocks.png)
 
-After adding each control, open the settings to ensure you have filled in any required properties, each control comes with it's own set of properties which control how it is rendered and what attributes are set, see [Form Controls reference](formcontrols.md)
+After adding each control, open the settings to ensure you have filled in any required properties, each control comes with it's own set of properties which control how it is rendered and what attributes are set, see [Form Controls reference](FormControls.md)
 
 For the final step you should add the "Form Control - Submit", this adds the submit button and allows you to enable/disable a Captcha control.
 
