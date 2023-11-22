@@ -1,0 +1,27 @@
+{
+    "$schema": "https://marketplace.umbraco.com/umbraco-marketplace-schema.json",
+    "AddOnPackagesRequiredForUmbracoCloud": [],
+    "AuthorDetails": {
+        "Name": "Huw Reddick",
+        "Description": "Umbraco MVP, .Net developer",
+        "Url": "https://our.umbraco.com/members/huwred/",
+        "ImageUrl": "https://our.umbraco.com/media/upload/af865e33-184c-4930-a90b-93b05c2a4d0c/me.jpg?width=250&height=250&mode=crop&upscale=true"
+    
+      },
+    "Category": "Editor Tools",
+    "Description": "Adds a custom Form Blockgrid control for sites using the UmBootstrap Starter Kit",
+    "DocumentationUrl": "https://github.com/huwred/Our.Community.CustomForms",
+    "LicenseTypes": [ "Free" ],
+    "IssueTrackerUrl": "https://github.com/huwred/Our.Community.CustomForms/issues",
+    "IsSubPackageOf": "",
+    "PackageType": "Package",
+    "Tags": [ "Packages","umbraco","bootstrap","umbraco-marketplace"],
+    "Title": "",
+    "VersionSpecificPackageIds": [
+      {
+        "UmbracoMajorVersion": 10,
+        "PackageId": "Our.Community.CustomForm"
+      }
+    ],
+    "VideoUrl": ""
+  }
