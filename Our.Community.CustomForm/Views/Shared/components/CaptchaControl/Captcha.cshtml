@@ -1,0 +1,19 @@
+﻿@model ContentViewComponentResult
+@using Microsoft.AspNetCore.Mvc.ViewComponents
+
+<div class="mb-1" id="captcha-check">
+    <h5><our-dictionary key="Captcha.Title">Confirm Humanity</our-dictionary></h5>
+    <p><our-dictionary key="Captcha.Description">Before we continue, we need to confirm you are a sentient being (it's a spam thing).Please type the answer to the question in the image below and click the 'Not a Robot' button.</our-dictionary></p>
+    <div id="div-captcha" class="grid mb-1">
+        <div class="g-col-12">
+            <img alt="Captcha" src="@Model.Content" /><a href="#" title="Click to refresh" id="captcha-refresh"><our-dictionary key="Captcha.Refresh">Reload Captcha</our-dictionary></a>
+        </div>
+        <div class="g-col-12 grid">
+            <div class="g-col-12 g-col-md-6">
+                <input type="text" name="Captcha" id="Captcha" class="form-control d-inline " placeholder="Please type your answer here" pattern="^[0-9]$"/>
+            </div>
+            <button class="g-col-12 g-col-md-3 btn btn-dark" id="btn-captcha" type="button"><our-dictionary key="Captcha.ButtonText">Not a Robot</our-dictionary></button>
+        </div>
+    </div>
+</div>
+

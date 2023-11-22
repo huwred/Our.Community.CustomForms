@@ -1,0 +1,41 @@
+﻿@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<Umbraco.Cms.Core.Models.Blocks.BlockGridItem>
+@using ContentModels = Umbraco.Cms.Web.Common.PublishedModels;
+@{
+    Layout = "_Layout_Features.cshtml";
+
+    string id = Model.Settings.Value<string>("formControlId").Replace(" ", "-", StringComparison.InvariantCulture);
+    string name = Model.Settings.Value<string>("formControlId").Replace(" ", "", StringComparison.InvariantCulture);
+    string required = Model.Settings.Value<bool>("formControlRequired") ? "required" : "";
+    var extraClass = Model.Settings.Value<string>("formControlClass");
+    var errMessage = Model.Settings.Value<string>("formControlErrorMessage");
+    var label = Model.Settings.Value<string>("formControlLabel");
+    string ariaId = "help_" + name;
+
+    var field = Model.Content;
+    var hasValidator = !string.IsNullOrWhiteSpace(field.Value<string>("formControlPattern"));
+    var pattern = field.Value<string>("formControlPattern");
+    var inputtype = field.Value<string>("formControlType");
+
+    var placeholder = field.Value<string>("formControlPlaceholder");
+    var helptext = field.Value<string>("formControlHelpText");
+
+
+    string mindate = field.Value<DateTime>("formControlMin") != DateTime.MinValue ? $@"min=""{field.Value<DateTime>("formControlMin")}""" : "";
+    string maxdate = field.Value<DateTime>("formControlMax") != DateTime.MinValue ? $@"max=""{field.Value<DateTime>("formControlMax")}""" : "";
+
+}
+
+<div class="mb-2 mt-1">
+    <label for="@id" class="form-label">@label</label>
+    @if (hasValidator)
+    {
+        <input pattern="@pattern" @mindate @maxdate aria-describedby="@ariaId" type="@inputtype" id="@id" name="@name" class="form-control @extraClass" placeholder="@placeholder" @required />
+    }
+    else
+    {
+        <input @mindate @maxdate aria-describedby="@ariaId" type="@inputtype" id="@id" name="@name" class="form-control @extraClass" placeholder="@placeholder" @required />
+    }
+    <small id="@ariaId" class="form-text text-muted" our-if="!string.IsNullOrWhiteSpace(helptext)">@helptext</small>
+    <div class="invalid-feedback">@errMessage</div>
+</div>
+

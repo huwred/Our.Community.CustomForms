@@ -1,0 +1,44 @@
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <OurCommunityCustomFormContentFilesPath>$(MSBuildThisFileDirectory)..\App_Plugins\Our.Community.CustomForm\**\*.*</OurCommunityCustomFormContentFilesPath>
+    <AssetsFolder>$(MSBuildThisFileDirectory)..\staticwebassets\**\*.*</AssetsFolder>
+    <ViewsFolder>$(MSBuildThisFileDirectory)..\Views\**\*.*</ViewsFolder>
+  </PropertyGroup>
+
+  <Target Name="CopyOurCommunityCustomFormApp_Plugins" BeforeTargets="BeforeBuild">
+    <ItemGroup>
+      <OurCommunityCustomFormContentFiles Include="$(OurCommunityCustomFormContentFilesPath)" />
+    </ItemGroup>
+    <Message Text="Copying Our.Community.CustomForm App_Plugins: $(OurCommunityCustomFormContentFilesPath) - #@(OurCommunityCustomFormContentFiles->Count()) files" Importance="high" />
+    <Copy SourceFiles="@(OurCommunityCustomFormContentFiles)" DestinationFiles="@(OurCommunityCustomFormContentFiles->'$(MSBuildProjectDirectory)\App_Plugins\Our.Community.CustomForm\%(RecursiveDir)%(Filename)%(Extension)')" SkipUnchangedFiles="true" />
+  </Target>
+
+  <Target Name="CopyViews" BeforeTargets="BeforeBuild">
+    <ItemGroup>
+      <ViewFiles Include="$(ViewsFolder)" />
+    </ItemGroup>
+    <Message Text="Copying Our.Community.CustomForm Views: $(ViewFiles) - #@(ViewsFolder->Count()) files" Importance="high" />
+    <Copy SourceFiles="@(ViewFiles)" DestinationFiles="@(ViewFiles->'$(MSBuildProjectDirectory)\Views\%(RecursiveDir)%(Filename)%(Extension)')" SkipUnchangedFiles="true" />
+  </Target>
+
+  <Target Name="CopyAssets" BeforeTargets="Build">
+    <ItemGroup>
+      <wwwFiles Include="$(AssetsFolder)" />
+    </ItemGroup>
+    <Message Text="Copying assets from: $(AssetsFolder) - #@(wwwFiles->Count()) files"  Importance="high" />
+    <Message Text="Copying assets to: $(MSBuildProjectDirectory)\wwwroot\"  Importance="high" />
+    <Copy
+      SourceFiles="@(wwwFiles)"
+      DestinationFiles="@(wwwFiles->'$(MSBuildProjectDirectory)\wwwroot\%(RecursiveDir)%(Filename)%(Extension)')"
+      Condition="!Exists('$(MSBuildProjectDirectory)\wwwroot\%(RecursiveDir)%(Filename)%(Extension)')"
+      SkipUnchangedFiles="true"
+    />
+  </Target>
+  <Target Name="ClearOurCommunityCustomFormApp_Plugins" BeforeTargets="Clean">
+    <ItemGroup>
+      <OurCommunityCustomFormDir Include="$(MSBuildProjectDirectory)\App_Plugins\Our.Community.CustomForm\" />
+    </ItemGroup>
+    <Message Text="Clear old Our.Community.CustomForm data" Importance="high" />
+    <RemoveDir Directories="@(OurCommunityCustomFormDir)" />
+  </Target>
+</Project>

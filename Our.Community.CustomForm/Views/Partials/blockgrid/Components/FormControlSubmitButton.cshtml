@@ -1,0 +1,23 @@
+﻿@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<Umbraco.Cms.Core.Models.Blocks.BlockGridItem>
+@using Umbraco.Extensions
+@using ContentModels = Umbraco.Cms.Web.Common.PublishedModels;
+@{
+    Layout = "_Layout_Features.cshtml";
+    var settings = Model.Settings;
+    var useCaptcha = settings.Value<bool>("formUseCaptcha");
+
+}
+<div our-if="@settings != null && @useCaptcha" class="g-col-@Model.ColumnSpan">
+    <p><label for="form-submit" id="form-submit-label" style="display: none">Many thanks, you may now continue and submit your request.</label></p>
+    <button type="submit" class="btn btn-primary" style="display: none" id="form-submit">Submit</button>
+</div>
+<div our-if="@settings != null && !@useCaptcha" class="g-col-@Model.ColumnSpan">
+    <button type="submit" class="btn btn-primary">Submit</button>
+</div>
+
+<!-- The Captcha has it's own form so needs to be included outside the main Umbraco form container -->
+<div class="g-col-12 g-col-md-8 p-3 pt-0" our-if="@settings != null && @useCaptcha">
+    <div id="captchaimage-div">
+        @await Component.InvokeAsync("CaptchaControl")
+    </div>
+</div>

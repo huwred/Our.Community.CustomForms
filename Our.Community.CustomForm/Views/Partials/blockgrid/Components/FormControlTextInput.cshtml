@@ -1,0 +1,54 @@
+﻿@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<Umbraco.Cms.Core.Models.Blocks.BlockGridItem>
+@{
+    Layout = "_Layout_Features.cshtml";
+
+    string id = Model.Settings.Value<string>("formControlId").Replace(" ", "-", StringComparison.InvariantCulture);
+    string name = Model.Settings.Value<string>("formControlId").Replace(" ", "", StringComparison.InvariantCulture);
+    string required = Model.Settings.Value<bool>("formControlRequired") ? "required" : "";
+    var extraClass = Model.Settings.Value<string>("formControlClass");
+    var errMessage = Model.Settings.Value<string>("formControlErrorMessage");
+    var label = Model.Settings.Value<string>("formControlLabel");
+    string ariaId = "help_" + name;
+
+    var field = Model.Content;
+    var hasValidator = !string.IsNullOrWhiteSpace(field.Value<string>("formControlPattern"));
+    var pattern = field.Value<string>("formControlPattern");
+    var inputtype = field.Value<string>("formControlType");
+
+    var placeholder = field.Value<string>("formControlPlaceholder");
+    var helptext = field.Value<string>("formControlHelpText");
+
+    var maxlen = field.Value<int>("formControlMax") > 0 ? $@"maxlength=""{field.Value<int>("formControlMax")}""" : "";
+    var minlen = field.Value<int>("formControlMin") > 0 ? $@"minlength=""{field.Value<int>("formControlMin")}""" : "";
+    string max = field.Value<int>("formControlMax") > 0 ? $@"max=""{field.Value<int>("formControlMax")}""" : "";
+    string min = field.Value<int>("formControlMin") > 0 ? $@"min=""{field.Value<int>("formControlMin")}""" : "";
+}
+
+<div class="mb-2 mt-1">
+    <label for="@id" class="form-label">@label</label>
+    @if (hasValidator)
+    {
+        if (inputtype == "number")
+        {
+            <input pattern="@pattern" aria-describedby="@ariaId" type="@inputtype" id="@id" name="@name" class="form-control @extraClass" placeholder="@placeholder" @required @min @max />
+        }
+        else
+        {
+            <input pattern="@pattern" aria-describedby="@ariaId" type="@inputtype" id="@id" name="@name" class="form-control @extraClass" placeholder="@placeholder" @required />
+        }
+    }
+    else
+    {
+        if (inputtype == "number")
+        {
+            <input @min @max aria-describedby="@ariaId" type="@inputtype" id="@id" name="@name" class="form-control @extraClass" placeholder="@placeholder" @required />
+        }
+        else
+        {
+            <input @minlen @maxlen aria-describedby="@ariaId" type="@inputtype" id="@id" name="@name" class="form-control @extraClass" placeholder="@placeholder" @required />
+        }
+    }
+    <small id="@ariaId" class="form-text text-muted" our-if="!string.IsNullOrWhiteSpace(helptext)">@helptext</small>
+    <div class="invalid-feedback">@errMessage</div>
+</div>
+

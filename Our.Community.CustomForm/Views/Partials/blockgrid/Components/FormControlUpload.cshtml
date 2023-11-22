@@ -1,0 +1,27 @@
+﻿@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<Umbraco.Cms.Core.Models.Blocks.BlockGridItem>;
+@using ContentModels = Umbraco.Cms.Web.Common.PublishedModels;
+@{
+    var settings = Model.Settings;
+    string id = settings.Value<string>("formControlId").Replace(" ", "-", StringComparison.InvariantCulture);
+    string name = settings.Value<string>("formControlId").Replace(" ", "", StringComparison.InvariantCulture);
+    string req = settings.Value<bool>("formControlRequired") ? "required" : "";
+    var extraClass = settings.Value<string>("formControlClass");
+    var errMessage = settings.Value<string>("formControlErrorMessage");
+    var label = Model.Settings.Value<string>("formControlLabel");
+    string ariaId = "help_" + name;
+
+    var field = Model.Content;
+    var helptext = field.Value<string>("formControlHelpText");
+
+    var accept = field.Value<string>("formControlAccept");
+    var uploadpath = field.Value<string>("formControlUploadPath");
+}
+
+<div class="mb-2 mt-1">
+    <label for="@id" class="form-label">@label</label>
+    <input aria-describedby="@ariaId" type="file" id="@id" name="@name" class="form-control @extraClass" accept="@accept" @req />
+    <small id="@ariaId" class="form-text text-muted" our-if="!string.IsNullOrWhiteSpace(helptext)">@helptext</small>
+    <input type="hidden" name="FormControlUploadPath" value="@uploadpath" />
+    <div class="invalid-feedback">@errMessage</div>
+</div>
+

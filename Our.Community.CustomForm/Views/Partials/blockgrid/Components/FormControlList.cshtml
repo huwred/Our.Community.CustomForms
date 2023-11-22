@@ -1,0 +1,33 @@
+﻿@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<Umbraco.Cms.Core.Models.Blocks.BlockGridItem>
+@using ContentModels = Umbraco.Cms.Web.Common.PublishedModels;
+@{
+    Layout = "_Layout_Features.cshtml";
+
+    string id = Model.Settings.Value<string>("formControlId").Replace(" ", "-", StringComparison.InvariantCulture);
+    string name = Model.Settings.Value<string>("formControlId").Replace(" ", "", StringComparison.InvariantCulture);
+    string required = Model.Settings.Value<bool>("formControlRequired") ? "required" : "";
+    var extraClass = Model.Settings.Value<string>("formControlClass");
+    var errMessage = Model.Settings.Value<string>("formControlErrorMessage");
+    var label = Model.Settings.Value<string>("formControlLabel");
+    string ariaId = "help_" + name;
+
+    var field = Model.Content;
+
+    var helptext = field.Value<string>("formControlHelpText");
+
+    string multiple = field.Value<bool>("formControlMultiSelect") ? "multiple" : "";
+}
+
+<div class="mb-2 mt-1">
+    <label for="@id" class="form-label">@label</label>
+    <select aria-describedby="@ariaId" class="browser-default custom-select form-control" id="@id" name="@name" @multiple @required>
+        @foreach (var block in field.Value<Umbraco.Cms.Core.Models.Blocks.BlockListModel>("formControlItems"))
+        {
+            var data = block.Content;
+            <option value="@data.Value("itemValue")">@data.Value("itemKey")</option>
+        }
+    </select>
+    <small id="@ariaId" class="form-text text-muted" our-if="!string.IsNullOrWhiteSpace(helptext)">@helptext</small>
+    <div class="invalid-feedback">@errMessage</div>
+</div>
+

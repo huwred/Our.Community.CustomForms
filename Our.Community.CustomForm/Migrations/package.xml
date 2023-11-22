@@ -1,0 +1,1154 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<umbPackage>
+  <info>
+    <package>
+      <name>CustomForm-BlockGrid</name>
+    </package>
+  </info>
+  <DocumentTypes>
+    <DocumentType Folders="Custom+Form+Builder" FolderKeys="3387d083-4b80-4c89-b37f-cf2e8908563a">
+      <Info>
+        <Name>Feature - Custom Form</Name>
+        <Alias>formLayout</Alias>
+        <Key>a25cb956-19a3-493c-8b3b-67a40a5cc971</Key>
+        <Icon>icon-application-window color-black</Icon>
+        <Thumbnail>folder.png</Thumbnail>
+        <Description />
+        <AllowAtRoot>False</AllowAtRoot>
+        <IsListView>False</IsListView>
+        <IsElement>True</IsElement>
+        <Variations>Nothing</Variations>
+        <Compositions />
+        <AllowedTemplates />
+        <DefaultTemplate></DefaultTemplate>
+      </Info>
+      <Structure />
+      <GenericProperties />
+      <Tabs />
+      <HistoryCleanupPolicy preventCleanup="false" />
+    </DocumentType>
+    <DocumentType Folders="Custom+Form+Builder/Controls" FolderKeys="3387d083-4b80-4c89-b37f-cf2e8908563a/3a63012d-44c4-48d9-98e7-0041a2bab939">
+      <Info>
+        <Name>Form Control - Checkbox</Name>
+        <Alias>formControlCheckbox</Alias>
+        <Key>fadd4cc3-7e16-4be8-8e15-fc1981d5cd53</Key>
+        <Icon>icon-checkbox-dotted-active color-black</Icon>
+        <Thumbnail>folder.png</Thumbnail>
+        <Description>Displays key value pairs as a set of checkboxes</Description>
+        <AllowAtRoot>False</AllowAtRoot>
+        <IsListView>False</IsListView>
+        <IsElement>True</IsElement>
+        <Variations>Nothing</Variations>
+        <Compositions>
+          <Composition>formControlKeyPair</Composition>
+          <Composition>formControlValidation</Composition>
+        </Compositions>
+        <AllowedTemplates />
+        <DefaultTemplate></DefaultTemplate>
+      </Info>
+      <Structure />
+      <GenericProperties>
+        <GenericProperty>
+          <Name>Display As Switch</Name>
+          <Alias>formControlAsSwitch</Alias>
+          <Key>ee671dc2-f2d8-4d56-9c37-7cf6ccf0e6ee</Key>
+          <Type>Umbraco.TrueFalse</Type>
+          <Definition>92897bc6-a5f3-4ffe-ae27-f2e7e33dda49</Definition>
+          <Tab Alias="control">Control</Tab>
+          <SortOrder>2</SortOrder>
+          <Mandatory>False</Mandatory>
+          <LabelOnTop>False</LabelOnTop>
+          <Description><![CDATA[use bootstrap "form-swich" class]]></Description>
+          <Variations>Nothing</Variations>
+        </GenericProperty>
+      </GenericProperties>
+      <Tabs>
+        <Tab>
+          <Id>128</Id>
+          <Key>dfe65ea9-7aa8-4669-b8ee-005cfc85b175</Key>
+          <Type>Tab</Type>
+          <Caption>Control</Caption>
+          <Alias>control</Alias>
+          <SortOrder>0</SortOrder>
+        </Tab>
+      </Tabs>
+      <HistoryCleanupPolicy preventCleanup="false" />
+    </DocumentType>
+    <DocumentType Folders="Custom+Form+Builder/Controls/Components" FolderKeys="3387d083-4b80-4c89-b37f-cf2e8908563a/3a63012d-44c4-48d9-98e7-0041a2bab939/bbdb2be1-64d1-419f-9c62-dc399700ee49">
+      <Info>
+        <Name>Form Control - Common</Name>
+        <Alias>formControlValidation</Alias>
+        <Key>725975f0-9da9-4f3d-bf11-1ba79d8805d1</Key>
+        <Icon>icon-defrag</Icon>
+        <Thumbnail>folder.png</Thumbnail>
+        <Description>Common control attributes</Description>
+        <AllowAtRoot>False</AllowAtRoot>
+        <IsListView>False</IsListView>
+        <IsElement>True</IsElement>
+        <Variations>Nothing</Variations>
+        <Compositions />
+        <AllowedTemplates />
+        <DefaultTemplate></DefaultTemplate>
+      </Info>
+      <Structure />
+      <GenericProperties>
+        <GenericProperty>
+          <Name>Pattern</Name>
+          <Alias>formControlPattern</Alias>
+          <Key>3c301088-fa23-44b1-a039-fa0afe2c99a3</Key>
+          <Type>Umbraco.TextBox</Type>
+          <Definition>0cc0eba1-9960-42c9-bf9b-60e150b429ae</Definition>
+          <Tab Alias="control">Control</Tab>
+          <SortOrder>10</SortOrder>
+          <Mandatory>False</Mandatory>
+          <LabelOnTop>False</LabelOnTop>
+          <Description><![CDATA[Regex pattern to validatate the field]]></Description>
+          <Variations>Nothing</Variations>
+        </GenericProperty>
+        <GenericProperty>
+          <Name>Placeholder</Name>
+          <Alias>formControlPlaceholder</Alias>
+          <Key>92638f2e-e7a0-43c3-96cf-d4ae44f3d827</Key>
+          <Type>Umbraco.TextBox</Type>
+          <Definition>0cc0eba1-9960-42c9-bf9b-60e150b429ae</Definition>
+          <Tab Alias="control">Control</Tab>
+          <SortOrder>11</SortOrder>
+          <Mandatory>False</Mandatory>
+          <LabelOnTop>False</LabelOnTop>
+          <Description><![CDATA[Placeholder text]]></Description>
+          <Variations>Nothing</Variations>
+        </GenericProperty>
+        <GenericProperty>
+          <Name>HelpText</Name>
+          <Alias>formControlHelpText</Alias>
+          <Key>4f02dc73-6817-494f-9e39-320b07372b44</Key>
+          <Type>Umbraco.TextBox</Type>
+          <Definition>0cc0eba1-9960-42c9-bf9b-60e150b429ae</Definition>
+          <Tab Alias="control">Control</Tab>
+          <SortOrder>12</SortOrder>
+          <Mandatory>False</Mandatory>
+          <LabelOnTop>False</LabelOnTop>
+          <Description><![CDATA[Text to display beneath the form control]]></Description>
+          <Variations>Nothing</Variations>
+        </GenericProperty>
+      </GenericProperties>
+      <Tabs>
+        <Tab>
+          <Id>124</Id>
+          <Key>ad6730ba-358c-4c08-b008-74108191ed1b</Key>
+          <Type>Tab</Type>
+          <Caption>Control</Caption>
+          <Alias>control</Alias>
+          <SortOrder>10</SortOrder>
+        </Tab>
+      </Tabs>
+      <HistoryCleanupPolicy preventCleanup="false" />
+    </DocumentType>
+    <DocumentType Folders="Custom+Form+Builder/Controls" FolderKeys="3387d083-4b80-4c89-b37f-cf2e8908563a/3a63012d-44c4-48d9-98e7-0041a2bab939">
+      <Info>
+        <Name>Form Control - DateTime</Name>
+        <Alias>formControlDateTime</Alias>
+        <Key>b36e9fd5-319e-4cf2-8d92-1c355bf9a0fd</Key>
+        <Icon>icon-calendar color-black</Icon>
+        <Thumbnail>folder.png</Thumbnail>
+        <Description>Displays a DateTime picker</Description>
+        <AllowAtRoot>False</AllowAtRoot>
+        <IsListView>False</IsListView>
+        <IsElement>True</IsElement>
+        <Variations>Nothing</Variations>
+        <Compositions>
+          <Composition>formControlValidation</Composition>
+        </Compositions>
+        <AllowedTemplates />
+        <DefaultTemplate></DefaultTemplate>
+      </Info>
+      <Structure />
+      <GenericProperties>
+        <GenericProperty>
+          <Name>Form  Control Type</Name>
+          <Alias>formControlType</Alias>
+          <Key>32014329-ef36-482b-b36d-e4be858e6b5b</Key>
+          <Type>Umbraco.DropDown.Flexible</Type>
+          <Definition>75841b98-13ce-4a45-bea1-1bd6072d0518</Definition>
+          <Tab Alias="control">Control</Tab>
+          <SortOrder>-1</SortOrder>
+          <Mandatory>False</Mandatory>
+          <LabelOnTop>False</LabelOnTop>
+          <Variations>Nothing</Variations>
+        </GenericProperty>
+        <GenericProperty>
+          <Name>Min</Name>
+          <Alias>formControlMin</Alias>
+          <Key>e885e179-9bd9-42ad-9593-32b3dcbdd1ab</Key>
+          <Type>Umbraco.DateTime</Type>
+          <Definition>e4d66c0f-b935-4200-81f0-025f7256b89a</Definition>
+          <Tab Alias="control/limits">Limits</Tab>
+          <SortOrder>0</SortOrder>
+          <Mandatory>False</Mandatory>
+          <LabelOnTop>False</LabelOnTop>
+          <Variations>Nothing</Variations>
+        </GenericProperty>
+        <GenericProperty>
+          <Name>Max</Name>
+          <Alias>formControlMax</Alias>
+          <Key>098311a3-9480-4c18-b12b-769518e989a6</Key>
+          <Type>Umbraco.DateTime</Type>
+          <Definition>e4d66c0f-b935-4200-81f0-025f7256b89a</Definition>
+          <Tab Alias="control/limits">Limits</Tab>
+          <SortOrder>1</SortOrder>
+          <Mandatory>False</Mandatory>
+          <LabelOnTop>False</LabelOnTop>
+          <Variations>Nothing</Variations>
+        </GenericProperty>
+      </GenericProperties>
+      <Tabs>
+        <Tab>
+          <Id>119</Id>
+          <Key>1691b2dc-5ee3-4622-9b3a-c8a2a92de4cc</Key>
+          <Type>Tab</Type>
+          <Caption>Control</Caption>
+          <Alias>control</Alias>
+          <SortOrder>0</SortOrder>
+        </Tab>
+        <Tab>
+          <Id>125</Id>
+          <Key>3ef3e693-8aa1-4781-9a93-28210311dbb9</Key>
+          <Type>Group</Type>
+          <Caption>Limits</Caption>
+          <Alias>control/limits</Alias>
+          <SortOrder>41</SortOrder>
+        </Tab>
+      </Tabs>
+      <HistoryCleanupPolicy preventCleanup="false" />
+    </DocumentType>
+    <DocumentType Folders="Custom+Form+Builder/Controls/Components" FolderKeys="3387d083-4b80-4c89-b37f-cf2e8908563a/3a63012d-44c4-48d9-98e7-0041a2bab939/bbdb2be1-64d1-419f-9c62-dc399700ee49">
+      <Info>
+        <Name>Form Control - KeyPairs</Name>
+        <Alias>formControlKeyPair</Alias>
+        <Key>d713a782-75ba-4dc1-9921-b98207bd141f</Key>
+        <Icon>icon-defrag</Icon>
+        <Thumbnail>folder.png</Thumbnail>
+        <Description>Key value pairs for lists, checkboxes and radio buttons.</Description>
+        <AllowAtRoot>False</AllowAtRoot>
+        <IsListView>False</IsListView>
+        <IsElement>True</IsElement>
+        <Variations>Nothing</Variations>
+        <Compositions />
+        <AllowedTemplates />
+        <DefaultTemplate></DefaultTemplate>
+      </Info>
+      <Structure />
+      <GenericProperties>
+        <GenericProperty>
+          <Name>Items</Name>
+          <Alias>formControlItems</Alias>
+          <Key>8b220d8a-079e-4338-942d-70797e07a5e9</Key>
+          <Type>Umbraco.BlockList</Type>
+          <Definition>cd35c0a9-fe1b-43e1-8ae2-a2223f8f948a</Definition>
+          <Tab Alias="control">Control</Tab>
+          <SortOrder>0</SortOrder>
+          <Mandatory>False</Mandatory>
+          <LabelOnTop>False</LabelOnTop>
+          <Variations>Nothing</Variations>
+        </GenericProperty>
+        <GenericProperty>
+          <Name>Layout</Name>
+          <Alias>formControlLayout</Alias>
+          <Key>da91fe2a-9942-45ee-b9cc-47ef1bb6a390</Key>
+          <Type>Umbraco.DropDown.Flexible</Type>
+          <Definition>9b5dbc28-b105-4c53-8d4b-185f8e4403af</Definition>
+          <Tab Alias="control">Control</Tab>
+          <SortOrder>1</SortOrder>
+          <Mandatory>False</Mandatory>
+          <LabelOnTop>False</LabelOnTop>
+          <Description><![CDATA[Display vertical or horizontal when grouped.]]></Description>
+          <Variations>Nothing</Variations>
+        </GenericProperty>
+      </GenericProperties>
+      <Tabs>
+        <Tab>
+          <Id>114</Id>
+          <Key>366ae7a4-f902-468e-bc02-fb0642ab6064</Key>
+          <Type>Tab</Type>
+          <Caption>Control</Caption>
+          <Alias>control</Alias>
+          <SortOrder>0</SortOrder>
+        </Tab>
+      </Tabs>
+      <HistoryCleanupPolicy preventCleanup="false" />
+    </DocumentType>
+    <DocumentType Folders="Custom+Form+Builder/Controls/Components" FolderKeys="3387d083-4b80-4c89-b37f-cf2e8908563a/3a63012d-44c4-48d9-98e7-0041a2bab939/bbdb2be1-64d1-419f-9c62-dc399700ee49">
+      <Info>
+        <Name>Form Control - Limits</Name>
+        <Alias>formControlLimits</Alias>
+        <Key>a2966399-5e9c-4736-b2e9-54caff1bc766</Key>
+        <Icon>icon-defrag</Icon>
+        <Thumbnail>folder.png</Thumbnail>
+        <Description>Max and minimum values for certain controls</Description>
+        <AllowAtRoot>False</AllowAtRoot>
+        <IsListView>False</IsListView>
+        <IsElement>True</IsElement>
+        <Variations>Nothing</Variations>
+        <Compositions />
+        <AllowedTemplates />
+        <DefaultTemplate></DefaultTemplate>
+      </Info>
+      <Structure />
+      <GenericProperties>
+        <GenericProperty>
+          <Name>Min</Name>
+          <Alias>formControlMin</Alias>
+          <Key>15e5ddda-1581-442b-921f-066ba971cdca</Key>
+          <Type>Umbraco.Integer</Type>
+          <Definition>2e6d3631-066e-44b8-aec4-96f09099b2b5</Definition>
+          <Tab Alias="control/limits">Limits</Tab>
+          <SortOrder>0</SortOrder>
+          <Mandatory>False</Mandatory>
+          <LabelOnTop>False</LabelOnTop>
+          <Description><![CDATA[Specifies a minimum value for a number or minimum number of characters]]></Description>
+          <Variations>Nothing</Variations>
+        </GenericProperty>
+        <GenericProperty>
+          <Name>Max</Name>
+          <Alias>formControlMax</Alias>
+          <Key>78d6b053-a97a-47b8-98a9-4e5ed35bfcd5</Key>
+          <Type>Umbraco.Integer</Type>
+          <Definition>2e6d3631-066e-44b8-aec4-96f09099b2b5</Definition>
+          <Tab Alias="control/limits">Limits</Tab>
+          <SortOrder>1</SortOrder>
+          <Mandatory>False</Mandatory>
+          <LabelOnTop>False</LabelOnTop>
+          <Description><![CDATA[Specifies the maximum value for a number or the maximum number of characters allowed]]></Description>
+          <Variations>Nothing</Variations>
+        </GenericProperty>
+      </GenericProperties>
+      <Tabs>
+        <Tab>
+          <Id>122</Id>
+          <Key>91355d8d-79b0-4ea3-9d25-d98bb8b11443</Key>
+          <Type>Tab</Type>
+          <Caption>Control</Caption>
+          <Alias>control</Alias>
+          <SortOrder>0</SortOrder>
+        </Tab>
+        <Tab>
+          <Id>121</Id>
+          <Key>be1a7038-3fca-4714-bb85-6368959e9717</Key>
+          <Type>Group</Type>
+          <Caption>Limits</Caption>
+          <Alias>control/limits</Alias>
+          <SortOrder>50</SortOrder>
+        </Tab>
+      </Tabs>
+      <HistoryCleanupPolicy preventCleanup="false" />
+    </DocumentType>
+    <DocumentType Folders="Custom+Form+Builder/Controls" FolderKeys="3387d083-4b80-4c89-b37f-cf2e8908563a/3a63012d-44c4-48d9-98e7-0041a2bab939">
+      <Info>
+        <Name>Form Control - List</Name>
+        <Alias>formControlList</Alias>
+        <Key>b159d8f3-ffd9-403f-850f-e01f437f16fb</Key>
+        <Icon>icon-list color-black</Icon>
+        <Thumbnail>folder.png</Thumbnail>
+        <Description>Displays key value pairs as a dropdown or list control</Description>
+        <AllowAtRoot>False</AllowAtRoot>
+        <IsListView>False</IsListView>
+        <IsElement>True</IsElement>
+        <Variations>Nothing</Variations>
+        <Compositions>
+          <Composition>formControlValidation</Composition>
+        </Compositions>
+        <AllowedTemplates />
+        <DefaultTemplate></DefaultTemplate>
+      </Info>
+      <Structure />
+      <GenericProperties>
+        <GenericProperty>
+          <Name>Items</Name>
+          <Alias>formControlItems</Alias>
+          <Key>1082d03f-fba0-4515-8865-db980d063560</Key>
+          <Type>Umbraco.BlockList</Type>
+          <Definition>cd35c0a9-fe1b-43e1-8ae2-a2223f8f948a</Definition>
+          <Tab Alias="control">Control</Tab>
+          <SortOrder>0</SortOrder>
+          <Mandatory>False</Mandatory>
+          <LabelOnTop>False</LabelOnTop>
+          <Description><![CDATA[Values for the Dropdown]]></Description>
+          <Variations>Nothing</Variations>
+        </GenericProperty>
+        <GenericProperty>
+          <Name>Multi Select</Name>
+          <Alias>formControlMultiSelect</Alias>
+          <Key>34e67ee4-712c-423b-a659-0065a021adb7</Key>
+          <Type>Umbraco.TrueFalse</Type>
+          <Definition>92897bc6-a5f3-4ffe-ae27-f2e7e33dda49</Definition>
+          <Tab Alias="control">Control</Tab>
+          <SortOrder>1</SortOrder>
+          <Mandatory>False</Mandatory>
+          <LabelOnTop>False</LabelOnTop>
+          <Description><![CDATA[Enabling multiselect will render items as a list]]></Description>
+          <Variations>Nothing</Variations>
+        </GenericProperty>
+      </GenericProperties>
+      <Tabs>
+        <Tab>
+          <Id>123</Id>
+          <Key>764231be-a269-47c9-89ae-d202cd27b869</Key>
+          <Type>Tab</Type>
+          <Caption>Control</Caption>
+          <Alias>control</Alias>
+          <SortOrder>0</SortOrder>
+        </Tab>
+      </Tabs>
+      <HistoryCleanupPolicy preventCleanup="false" />
+    </DocumentType>
+    <DocumentType Folders="Custom+Form+Builder/Controls" FolderKeys="3387d083-4b80-4c89-b37f-cf2e8908563a/3a63012d-44c4-48d9-98e7-0041a2bab939">
+      <Info>
+        <Name>Form Control - Radio Button</Name>
+        <Alias>formControlRadioButton</Alias>
+        <Key>7ef881a5-de9c-4d20-9717-3d5ad67d9c07</Key>
+        <Icon>icon-circle-dotted color-black</Icon>
+        <Thumbnail>folder.png</Thumbnail>
+        <Description>Displays key value pairs as a set of radio buttons</Description>
+        <AllowAtRoot>False</AllowAtRoot>
+        <IsListView>False</IsListView>
+        <IsElement>True</IsElement>
+        <Variations>Nothing</Variations>
+        <Compositions>
+          <Composition>formControlValidation</Composition>
+          <Composition>formControlKeyPair</Composition>
+        </Compositions>
+        <AllowedTemplates />
+        <DefaultTemplate></DefaultTemplate>
+      </Info>
+      <Structure />
+      <GenericProperties />
+      <Tabs />
+      <HistoryCleanupPolicy preventCleanup="false" />
+    </DocumentType>
+    <DocumentType Folders="Custom+Form+Builder/Controls" FolderKeys="3387d083-4b80-4c89-b37f-cf2e8908563a/3a63012d-44c4-48d9-98e7-0041a2bab939">
+      <Info>
+        <Name>Form Control - RichText</Name>
+        <Alias>formControlRichText</Alias>
+        <Key>d994a64f-b369-4eb6-9187-1dcbb135f840</Key>
+        <Icon>icon-article color-black</Icon>
+        <Thumbnail>folder.png</Thumbnail>
+        <Description>Displays a TinyMCE editor</Description>
+        <AllowAtRoot>False</AllowAtRoot>
+        <IsListView>False</IsListView>
+        <IsElement>True</IsElement>
+        <Variations>Nothing</Variations>
+        <Compositions>
+          <Composition>formControlValidation</Composition>
+        </Compositions>
+        <AllowedTemplates />
+        <DefaultTemplate></DefaultTemplate>
+      </Info>
+      <Structure />
+      <GenericProperties>
+        <GenericProperty>
+          <Name>Rows</Name>
+          <Alias>formControlRows</Alias>
+          <Key>bf75cc24-08f7-4f56-bedd-dbd6c1401b89</Key>
+          <Type>Umbraco.Integer</Type>
+          <Definition>2e6d3631-066e-44b8-aec4-96f09099b2b5</Definition>
+          <Tab Alias="control">Control</Tab>
+          <SortOrder>3</SortOrder>
+          <Mandatory>False</Mandatory>
+          <LabelOnTop>False</LabelOnTop>
+          <Description><![CDATA[No. of rows in the textarea]]></Description>
+          <Variations>Nothing</Variations>
+        </GenericProperty>
+      </GenericProperties>
+      <Tabs>
+        <Tab>
+          <Id>117</Id>
+          <Key>ca41d697-4355-442e-ad80-ad2fa5ec3e97</Key>
+          <Type>Tab</Type>
+          <Caption>Control</Caption>
+          <Alias>control</Alias>
+          <SortOrder>0</SortOrder>
+        </Tab>
+      </Tabs>
+      <HistoryCleanupPolicy preventCleanup="false" />
+    </DocumentType>
+    <DocumentType Folders="Custom+Form+Builder/Controls" FolderKeys="3387d083-4b80-4c89-b37f-cf2e8908563a/3a63012d-44c4-48d9-98e7-0041a2bab939">
+      <Info>
+        <Name>Form Control - Submit</Name>
+        <Alias>formControlSubmitButton</Alias>
+        <Key>136e590d-94a6-4b5a-8f3a-1cc2b30b6ccf</Key>
+        <Icon>icon-next color-black</Icon>
+        <Thumbnail>folder.png</Thumbnail>
+        <Description />
+        <AllowAtRoot>False</AllowAtRoot>
+        <IsListView>False</IsListView>
+        <IsElement>True</IsElement>
+        <Variations>Nothing</Variations>
+        <Compositions />
+        <AllowedTemplates />
+        <DefaultTemplate></DefaultTemplate>
+      </Info>
+      <Structure />
+      <GenericProperties />
+      <Tabs />
+      <HistoryCleanupPolicy preventCleanup="false" />
+    </DocumentType>
+    <DocumentType Folders="Custom+Form+Builder/Controls" FolderKeys="3387d083-4b80-4c89-b37f-cf2e8908563a/3a63012d-44c4-48d9-98e7-0041a2bab939">
+      <Info>
+        <Name>Form Control - Text Input</Name>
+        <Alias>formControlTextInput</Alias>
+        <Key>9daa9921-1a40-4479-8136-9143c694b517</Key>
+        <Icon>icon-autofill color-black</Icon>
+        <Thumbnail>folder.png</Thumbnail>
+        <Description>Displays a standard input control</Description>
+        <AllowAtRoot>False</AllowAtRoot>
+        <IsListView>False</IsListView>
+        <IsElement>True</IsElement>
+        <Variations>Nothing</Variations>
+        <Compositions>
+          <Composition>formControlValidation</Composition>
+          <Composition>formControlLimits</Composition>
+        </Compositions>
+        <AllowedTemplates />
+        <DefaultTemplate></DefaultTemplate>
+      </Info>
+      <Structure />
+      <GenericProperties>
+        <GenericProperty>
+          <Name>Type</Name>
+          <Alias>formControlType</Alias>
+          <Key>4902e3da-c8dc-4152-922a-36d693d2d37c</Key>
+          <Type>Umbraco.DropDown.Flexible</Type>
+          <Definition>59dac83e-a594-4c08-bf67-be92e1e738cc</Definition>
+          <Tab Alias="control">Control</Tab>
+          <SortOrder>0</SortOrder>
+          <Mandatory>False</Mandatory>
+          <LabelOnTop>False</LabelOnTop>
+          <Description><![CDATA[Select an input type, text, numeric, email etc.]]></Description>
+          <Variations>Nothing</Variations>
+        </GenericProperty>
+      </GenericProperties>
+      <Tabs>
+        <Tab>
+          <Id>118</Id>
+          <Key>ca2e9767-1cd6-45a2-8a54-f262bd3697a3</Key>
+          <Type>Tab</Type>
+          <Caption>Control</Caption>
+          <Alias>control</Alias>
+          <SortOrder>0</SortOrder>
+        </Tab>
+      </Tabs>
+      <HistoryCleanupPolicy preventCleanup="false" />
+    </DocumentType>
+    <DocumentType Folders="Custom+Form+Builder/Controls" FolderKeys="3387d083-4b80-4c89-b37f-cf2e8908563a/3a63012d-44c4-48d9-98e7-0041a2bab939">
+      <Info>
+        <Name>Form Control - TextArea</Name>
+        <Alias>formControlTextArea</Alias>
+        <Key>7e8e25ed-4285-4c13-9e5e-b0426c1b2b92</Key>
+        <Icon>icon-umb-content color-black</Icon>
+        <Thumbnail>folder.png</Thumbnail>
+        <Description>Displays a standard textarea control</Description>
+        <AllowAtRoot>False</AllowAtRoot>
+        <IsListView>False</IsListView>
+        <IsElement>True</IsElement>
+        <Variations>Nothing</Variations>
+        <Compositions>
+          <Composition>formControlLimits</Composition>
+          <Composition>formControlValidation</Composition>
+        </Compositions>
+        <AllowedTemplates />
+        <DefaultTemplate></DefaultTemplate>
+      </Info>
+      <Structure />
+      <GenericProperties>
+        <GenericProperty>
+          <Name>Rows</Name>
+          <Alias>formControlRows</Alias>
+          <Key>b4b1cbb3-744c-4bb3-990d-56245f236b05</Key>
+          <Type>Umbraco.Integer</Type>
+          <Definition>2e6d3631-066e-44b8-aec4-96f09099b2b5</Definition>
+          <Tab Alias="control">Control</Tab>
+          <SortOrder>0</SortOrder>
+          <Mandatory>False</Mandatory>
+          <LabelOnTop>False</LabelOnTop>
+          <Description><![CDATA[No. of rows in the textarea]]></Description>
+          <Variations>Nothing</Variations>
+        </GenericProperty>
+      </GenericProperties>
+      <Tabs>
+        <Tab>
+          <Id>115</Id>
+          <Key>69f28fce-65f0-40c9-b5df-594e87f34072</Key>
+          <Type>Tab</Type>
+          <Caption>Control</Caption>
+          <Alias>control</Alias>
+          <SortOrder>0</SortOrder>
+        </Tab>
+      </Tabs>
+      <HistoryCleanupPolicy preventCleanup="false" />
+    </DocumentType>
+    <DocumentType Folders="Custom+Form+Builder/Controls" FolderKeys="3387d083-4b80-4c89-b37f-cf2e8908563a/3a63012d-44c4-48d9-98e7-0041a2bab939">
+      <Info>
+        <Name>Form Control - Upload</Name>
+        <Alias>formControlUpload</Alias>
+        <Key>946f4f92-688c-4209-84c4-02666abad7b9</Key>
+        <Icon>icon-umb-deploy color-black</Icon>
+        <Thumbnail>folder.png</Thumbnail>
+        <Description>Displays a file upload control</Description>
+        <AllowAtRoot>False</AllowAtRoot>
+        <IsListView>False</IsListView>
+        <IsElement>True</IsElement>
+        <Variations>Nothing</Variations>
+        <Compositions>
+          <Composition>formControlValidation</Composition>
+        </Compositions>
+        <AllowedTemplates />
+        <DefaultTemplate></DefaultTemplate>
+      </Info>
+      <Structure />
+      <GenericProperties>
+        <GenericProperty>
+          <Name>Accept</Name>
+          <Alias>formControlAccept</Alias>
+          <Key>6a3c7936-efce-4ee3-924c-33b7a21b5715</Key>
+          <Type>Umbraco.TextBox</Type>
+          <Definition>0cc0eba1-9960-42c9-bf9b-60e150b429ae</Definition>
+          <Tab Alias="control">Control</Tab>
+          <SortOrder>3</SortOrder>
+          <Mandatory>False</Mandatory>
+          <LabelOnTop>False</LabelOnTop>
+          <Description><![CDATA[takes a comma-separated list of allowed file extensions or MIME types. Some examples: 
+
+accept="image/**" — Accept any file with an image MIME type.
+accept="image/png, image/jpeg" or accept=".png,]]></Description>
+          <Variations>Nothing</Variations>
+        </GenericProperty>
+        <GenericProperty>
+          <Name>Upload Path</Name>
+          <Alias>formControlUploadPath</Alias>
+          <Key>7d9e672a-837e-412e-92fd-03750ebdafb7</Key>
+          <Type>Umbraco.TextBox</Type>
+          <Definition>0cc0eba1-9960-42c9-bf9b-60e150b429ae</Definition>
+          <Tab Alias="control">Control</Tab>
+          <SortOrder>4</SortOrder>
+          <Mandatory>False</Mandatory>
+          <LabelOnTop>False</LabelOnTop>
+          <Description><![CDATA[Path to upload files]]></Description>
+          <Variations>Nothing</Variations>
+        </GenericProperty>
+      </GenericProperties>
+      <Tabs>
+        <Tab>
+          <Id>116</Id>
+          <Key>260edbe7-ff65-4cbd-a062-fc93be73880f</Key>
+          <Type>Tab</Type>
+          <Caption>Control</Caption>
+          <Alias>control</Alias>
+          <SortOrder>0</SortOrder>
+        </Tab>
+      </Tabs>
+      <HistoryCleanupPolicy preventCleanup="false" />
+    </DocumentType>
+    <DocumentType Folders="Custom+Form+Builder/Settings" FolderKeys="3387d083-4b80-4c89-b37f-cf2e8908563a/1df203c8-cc6d-43cb-a48b-27c8fc50f75d">
+      <Info>
+        <Name>Form Control Settings</Name>
+        <Alias>formControlSettings</Alias>
+        <Key>fc330139-a176-42dc-8a0e-8687d0c4431b</Key>
+        <Icon>icon-settings-alt color-black</Icon>
+        <Thumbnail>folder.png</Thumbnail>
+        <Description />
+        <AllowAtRoot>False</AllowAtRoot>
+        <IsListView>False</IsListView>
+        <IsElement>True</IsElement>
+        <Variations>Nothing</Variations>
+        <Compositions />
+        <AllowedTemplates />
+        <DefaultTemplate></DefaultTemplate>
+      </Info>
+      <Structure />
+      <GenericProperties>
+        <GenericProperty>
+          <Name>Name/Id</Name>
+          <Alias>formControlId</Alias>
+          <Key>f4515ce5-a99d-4342-beb9-cdd3c7a9499e</Key>
+          <Type>Umbraco.TextBox</Type>
+          <Definition>0cc0eba1-9960-42c9-bf9b-60e150b429ae</Definition>
+          <Tab Alias="attributes">Attributes</Tab>
+          <SortOrder>0</SortOrder>
+          <Mandatory>True</Mandatory>
+          <LabelOnTop>False</LabelOnTop>
+          <Description><![CDATA[name of control, used for id and name attributes. For 'id' attribute spaces will be replaced replaced with '-']]></Description>
+          <Variations>Nothing</Variations>
+        </GenericProperty>
+        <GenericProperty>
+          <Name>Label</Name>
+          <Alias>formControlLabel</Alias>
+          <Key>287e1b11-f121-4e45-a848-12c370431081</Key>
+          <Type>Umbraco.TextBox</Type>
+          <Definition>1daaca9d-56e3-4d94-bd58-ed7980537ca6</Definition>
+          <Tab Alias="attributes">Attributes</Tab>
+          <SortOrder>2</SortOrder>
+          <Mandatory>False</Mandatory>
+          <LabelOnTop>False</LabelOnTop>
+          <Description><![CDATA[Label for the form control]]></Description>
+          <Variations>Nothing</Variations>
+        </GenericProperty>
+        <GenericProperty>
+          <Name>Required</Name>
+          <Alias>formControlRequired</Alias>
+          <Key>52e95352-2ecf-4d60-9f8c-c8e5ae4072e0</Key>
+          <Type>Umbraco.TrueFalse</Type>
+          <Definition>92897bc6-a5f3-4ffe-ae27-f2e7e33dda49</Definition>
+          <Tab Alias="attributes">Attributes</Tab>
+          <SortOrder>3</SortOrder>
+          <Mandatory>False</Mandatory>
+          <LabelOnTop>False</LabelOnTop>
+          <Description><![CDATA[Control is mandatory]]></Description>
+          <Variations>Nothing</Variations>
+        </GenericProperty>
+        <GenericProperty>
+          <Name>Error Message</Name>
+          <Alias>formControlErrorMessage</Alias>
+          <Key>04cb6ce4-726a-4289-840a-3b3bc778f3ba</Key>
+          <Type>Umbraco.TextBox</Type>
+          <Definition>0cc0eba1-9960-42c9-bf9b-60e150b429ae</Definition>
+          <Tab Alias="attributes">Attributes</Tab>
+          <SortOrder>4</SortOrder>
+          <Mandatory>False</Mandatory>
+          <LabelOnTop>False</LabelOnTop>
+          <Description><![CDATA[Message to display if validation fails]]></Description>
+          <Variations>Nothing</Variations>
+        </GenericProperty>
+        <GenericProperty>
+          <Name>Class</Name>
+          <Alias>formControlClass</Alias>
+          <Key>c1a4d217-77d0-4c22-9b76-e18611a705f2</Key>
+          <Type>Umbraco.TextBox</Type>
+          <Definition>1daaca9d-56e3-4d94-bd58-ed7980537ca6</Definition>
+          <Tab Alias="attributes">Attributes</Tab>
+          <SortOrder>5</SortOrder>
+          <Mandatory>False</Mandatory>
+          <LabelOnTop>False</LabelOnTop>
+          <Description><![CDATA[custom classes, they will be appended to the control class]]></Description>
+          <Variations>Nothing</Variations>
+        </GenericProperty>
+        <GenericProperty>
+          <Name>Hide or Display</Name>
+          <Alias>featureSettingsHideDisplay</Alias>
+          <Key>0b97ab60-32e8-48a2-a4bb-a38144483ba9</Key>
+          <Type>Umbraco.TrueFalse</Type>
+          <Definition>8740cd33-d2b7-4a6e-ab6f-cfecc463b766</Definition>
+          <Tab Alias="attributes">Attributes</Tab>
+          <SortOrder>6</SortOrder>
+          <Mandatory>False</Mandatory>
+          <LabelOnTop>False</LabelOnTop>
+          <Variations>Nothing</Variations>
+        </GenericProperty>
+      </GenericProperties>
+      <Tabs>
+        <Tab>
+          <Id>107</Id>
+          <Key>3a2ba734-b2c4-4b3c-9f04-ebc7f492c4cf</Key>
+          <Type>Group</Type>
+          <Caption>Attributes</Caption>
+          <Alias>attributes</Alias>
+          <SortOrder>0</SortOrder>
+        </Tab>
+      </Tabs>
+      <HistoryCleanupPolicy preventCleanup="false" />
+    </DocumentType>
+    <DocumentType Folders="Custom+Form+Builder/Settings" FolderKeys="3387d083-4b80-4c89-b37f-cf2e8908563a/1df203c8-cc6d-43cb-a48b-27c8fc50f75d">
+      <Info>
+        <Name>Form Settings</Name>
+        <Alias>formSettings</Alias>
+        <Key>6bfc5cb9-e314-4344-9e01-6056141e3ec5</Key>
+        <Icon>icon-settings-alt color-black</Icon>
+        <Thumbnail>folder.png</Thumbnail>
+        <Description />
+        <AllowAtRoot>False</AllowAtRoot>
+        <IsListView>False</IsListView>
+        <IsElement>True</IsElement>
+        <Variations>Nothing</Variations>
+        <Compositions>
+          <Composition>layoutSettingsComponentBackgroundImage</Composition>
+          <Composition>layoutSettingsComponentColorPicker</Composition>
+        </Compositions>
+        <AllowedTemplates />
+        <DefaultTemplate></DefaultTemplate>
+      </Info>
+      <Structure />
+      <GenericProperties>
+        <GenericProperty>
+          <Name>Form Title</Name>
+          <Alias>formTitle</Alias>
+          <Key>26d3feca-3b6b-45c9-a2be-93807c7c3130</Key>
+          <Type>Umbraco.TextBox</Type>
+          <Definition>0cc0eba1-9960-42c9-bf9b-60e150b429ae</Definition>
+          <Tab Alias="formSettings">Form Settings</Tab>
+          <SortOrder>0</SortOrder>
+          <Mandatory>False</Mandatory>
+          <LabelOnTop>False</LabelOnTop>
+          <Variations>Nothing</Variations>
+        </GenericProperty>
+        <GenericProperty>
+          <Name>Form Action</Name>
+          <Alias>formAction</Alias>
+          <Key>ddafdd4a-e1e3-4ac9-860f-aaaef8826dc4</Key>
+          <Type>Umbraco.TextBox</Type>
+          <Definition>0cc0eba1-9960-42c9-bf9b-60e150b429ae</Definition>
+          <Tab Alias="formSettings">Form Settings</Tab>
+          <SortOrder>1</SortOrder>
+          <Mandatory>True</Mandatory>
+          <LabelOnTop>False</LabelOnTop>
+          <Description><![CDATA[The full address of the surface controller method.
+i.e. /umbraco/surface/formssurface/SubmitTestForm]]></Description>
+          <Variations>Nothing</Variations>
+        </GenericProperty>
+        <GenericProperty>
+          <Name>Form Display Legend</Name>
+          <Alias>formDisplayLegend</Alias>
+          <Key>6e6a4505-01db-4279-b3ba-3c1a2f57260e</Key>
+          <Type>Umbraco.TrueFalse</Type>
+          <Definition>92897bc6-a5f3-4ffe-ae27-f2e7e33dda49</Definition>
+          <Tab Alias="formSettings">Form Settings</Tab>
+          <SortOrder>2</SortOrder>
+          <Mandatory>False</Mandatory>
+          <LabelOnTop>False</LabelOnTop>
+          <Description><![CDATA[Display the title as the form <legend>]]></Description>
+          <Variations>Nothing</Variations>
+        </GenericProperty>
+        <GenericProperty>
+          <Name>Hide or Display</Name>
+          <Alias>featureSettingsHideDisplay</Alias>
+          <Key>2d8ec0fb-7d53-45bd-a15a-c64593e71239</Key>
+          <Type>Umbraco.TrueFalse</Type>
+          <Definition>8740cd33-d2b7-4a6e-ab6f-cfecc463b766</Definition>
+          <Tab Alias="formSettings">Form Settings</Tab>
+          <SortOrder>3</SortOrder>
+          <Mandatory>False</Mandatory>
+          <LabelOnTop>False</LabelOnTop>
+          <Variations>Nothing</Variations>
+        </GenericProperty>
+      </GenericProperties>
+      <Tabs>
+        <Tab>
+          <Id>130</Id>
+          <Key>87d8e70f-8d36-4f7c-85bd-3bf821109dd2</Key>
+          <Type>Tab</Type>
+          <Caption>Form Settings</Caption>
+          <Alias>formSettings</Alias>
+          <SortOrder>0</SortOrder>
+        </Tab>
+      </Tabs>
+      <HistoryCleanupPolicy preventCleanup="false" />
+    </DocumentType>
+    <DocumentType Folders="Custom+Form+Builder/Settings" FolderKeys="3387d083-4b80-4c89-b37f-cf2e8908563a/1df203c8-cc6d-43cb-a48b-27c8fc50f75d">
+      <Info>
+        <Name>Form Submit Settings</Name>
+        <Alias>formSubmitSettings</Alias>
+        <Key>73adf453-ac59-41cf-ae30-a4dd850ac5b4</Key>
+        <Icon>icon-settings-alt color-black</Icon>
+        <Thumbnail>folder.png</Thumbnail>
+        <Description />
+        <AllowAtRoot>False</AllowAtRoot>
+        <IsListView>False</IsListView>
+        <IsElement>True</IsElement>
+        <Variations>Nothing</Variations>
+        <Compositions />
+        <AllowedTemplates />
+        <DefaultTemplate></DefaultTemplate>
+      </Info>
+      <Structure />
+      <GenericProperties>
+        <GenericProperty>
+          <Name>UseCaptcha</Name>
+          <Alias>formUseCaptcha</Alias>
+          <Key>ac2e8522-73ab-4add-bc94-89cdb54549ed</Key>
+          <Type>Umbraco.TrueFalse</Type>
+          <Definition>92897bc6-a5f3-4ffe-ae27-f2e7e33dda49</Definition>
+          <Tab Alias="settings">Settings</Tab>
+          <SortOrder>0</SortOrder>
+          <Mandatory>False</Mandatory>
+          <LabelOnTop>False</LabelOnTop>
+          <Variations>Nothing</Variations>
+        </GenericProperty>
+      </GenericProperties>
+      <Tabs>
+        <Tab>
+          <Id>127</Id>
+          <Key>e47c07ca-bf1f-49bd-b1a9-d89a9feb4cd6</Key>
+          <Type>Group</Type>
+          <Caption>Settings</Caption>
+          <Alias>settings</Alias>
+          <SortOrder>0</SortOrder>
+        </Tab>
+      </Tabs>
+      <HistoryCleanupPolicy preventCleanup="false" />
+    </DocumentType>
+    <DocumentType Folders="Custom+Form+Builder/Controls/Components" FolderKeys="3387d083-4b80-4c89-b37f-cf2e8908563a/3a63012d-44c4-48d9-98e7-0041a2bab939/bbdb2be1-64d1-419f-9c62-dc399700ee49">
+      <Info>
+        <Name>Key Value Pair</Name>
+        <Alias>formControlKeyValuePair</Alias>
+        <Key>603a9bf5-88d2-4adb-aa37-b180e0c66605</Key>
+        <Icon>icon-umb-contour color-black</Icon>
+        <Thumbnail>folder.png</Thumbnail>
+        <Description>Single Key Value pair element</Description>
+        <AllowAtRoot>False</AllowAtRoot>
+        <IsListView>False</IsListView>
+        <IsElement>True</IsElement>
+        <Variations>Nothing</Variations>
+        <Compositions />
+        <AllowedTemplates />
+        <DefaultTemplate></DefaultTemplate>
+      </Info>
+      <Structure />
+      <GenericProperties>
+        <GenericProperty>
+          <Name>Item Key</Name>
+          <Alias>itemKey</Alias>
+          <Key>cbaad476-5a0a-412c-bfbb-465ba2366406</Key>
+          <Type>Umbraco.TextBox</Type>
+          <Definition>0cc0eba1-9960-42c9-bf9b-60e150b429ae</Definition>
+          <Tab Alias="item">Item</Tab>
+          <SortOrder>0</SortOrder>
+          <Mandatory>True</Mandatory>
+          <LabelOnTop>False</LabelOnTop>
+          <Description><![CDATA[Label of the value (displayed in form)]]></Description>
+          <Variations>Nothing</Variations>
+        </GenericProperty>
+        <GenericProperty>
+          <Name>Item Value</Name>
+          <Alias>itemValue</Alias>
+          <Key>915790cb-0cec-4f56-ae71-2d7c354fe61c</Key>
+          <Type>Umbraco.TextBox</Type>
+          <Definition>0cc0eba1-9960-42c9-bf9b-60e150b429ae</Definition>
+          <Tab Alias="item">Item</Tab>
+          <SortOrder>1</SortOrder>
+          <Mandatory>False</Mandatory>
+          <LabelOnTop>False</LabelOnTop>
+          <Description><![CDATA[The 'value' attribute of the item]]></Description>
+          <Variations>Nothing</Variations>
+        </GenericProperty>
+      </GenericProperties>
+      <Tabs>
+        <Tab>
+          <Id>110</Id>
+          <Key>dbf1d586-5783-4e3f-b911-7f881b9f021b</Key>
+          <Type>Tab</Type>
+          <Caption>Item</Caption>
+          <Alias>item</Alias>
+          <SortOrder>0</SortOrder>
+        </Tab>
+      </Tabs>
+      <HistoryCleanupPolicy preventCleanup="false" />
+    </DocumentType>
+    <DocumentType Folders="Layout+Settings/Layout+Settings+Components" FolderKeys="272bf4da-8e08-4642-ae4c-1c090ad2b7ce/3f805f0d-4b87-4547-bd5f-9737887a2a1e">
+      <Info>
+        <Name>Layout Settings Component - Background Color</Name>
+        <Alias>layoutSettingsComponentColorPicker</Alias>
+        <Key>2bd0b48b-60cd-4a59-9d7c-abcc7ca7a13b</Key>
+        <Icon>icon-science</Icon>
+        <Thumbnail>folder.png</Thumbnail>
+        <Description />
+        <AllowAtRoot>False</AllowAtRoot>
+        <IsListView>False</IsListView>
+        <IsElement>True</IsElement>
+        <Variations>Nothing</Variations>
+        <Compositions />
+        <AllowedTemplates />
+        <DefaultTemplate></DefaultTemplate>
+      </Info>
+      <Structure />
+      <GenericProperties>
+        <GenericProperty>
+          <Name>Colour</Name>
+          <Alias>layoutSettingsColourPicker</Alias>
+          <Key>c438e8f8-ec6e-4871-a73c-39bbabbb9df5</Key>
+          <Type>Umbraco.ColorPicker</Type>
+          <Definition>0225af17-b302-49cb-9176-b9f35cab9c17</Definition>
+          <Tab Alias="backgroundColour/layout">Layout</Tab>
+          <SortOrder>0</SortOrder>
+          <Mandatory>False</Mandatory>
+          <LabelOnTop>True</LabelOnTop>
+          <MandatoryMessage></MandatoryMessage>
+          <Validation></Validation>
+          <ValidationRegExpMessage></ValidationRegExpMessage>
+          <Description><![CDATA[]]></Description>
+          <Variations>Nothing</Variations>
+        </GenericProperty>
+        <GenericProperty>
+          <Name>Shade</Name>
+          <Alias>layoutSettingsColourShades</Alias>
+          <Key>13a7871c-1bc0-47f4-a478-a5a6d5e958e2</Key>
+          <Type>Umbraco.Slider</Type>
+          <Definition>18924646-4e3c-4e34-8c12-5078e818a484</Definition>
+          <Tab Alias="backgroundColour/layout">Layout</Tab>
+          <SortOrder>1</SortOrder>
+          <Mandatory>False</Mandatory>
+          <LabelOnTop>True</LabelOnTop>
+          <MandatoryMessage></MandatoryMessage>
+          <Validation></Validation>
+          <ValidationRegExpMessage></ValidationRegExpMessage>
+          <Description><![CDATA[]]></Description>
+          <Variations>Nothing</Variations>
+        </GenericProperty>
+        <GenericProperty>
+          <Name>Opacity</Name>
+          <Alias>layoutSettingsColourOpacity</Alias>
+          <Key>8f8650f1-c64a-4faf-83a3-104822688f20</Key>
+          <Type>Umbraco.Slider</Type>
+          <Definition>c422ac53-3f46-46d7-b9d0-7057fb460bfb</Definition>
+          <Tab Alias="backgroundColour/layout">Layout</Tab>
+          <SortOrder>2</SortOrder>
+          <Mandatory>False</Mandatory>
+          <LabelOnTop>True</LabelOnTop>
+          <MandatoryMessage></MandatoryMessage>
+          <Validation></Validation>
+          <ValidationRegExpMessage></ValidationRegExpMessage>
+          <Description><![CDATA[]]></Description>
+          <Variations>Nothing</Variations>
+        </GenericProperty>
+        <GenericProperty>
+          <Name>layoutAreasColourPicker</Name>
+          <Alias>layoutAreasColourPicker</Alias>
+          <Key>7a6d7a3a-1dd9-4f7c-aea1-4bd773667beb</Key>
+          <Type>Umbraco.ColorPicker</Type>
+          <Definition>5dfe5dfe-e561-4f1a-ab7a-0d13f44bacd6</Definition>
+          <Tab Alias="backgroundColour/areas">Areas</Tab>
+          <SortOrder>0</SortOrder>
+          <Mandatory>False</Mandatory>
+          <LabelOnTop>False</LabelOnTop>
+          <MandatoryMessage></MandatoryMessage>
+          <Validation></Validation>
+          <ValidationRegExpMessage></ValidationRegExpMessage>
+          <Description><![CDATA[]]></Description>
+          <Variations>Nothing</Variations>
+        </GenericProperty>
+      </GenericProperties>
+      <Tabs>
+        <Tab>
+          <Id>102</Id>
+          <Key>7d241c6f-a69e-4423-add5-3ad68d43552e</Key>
+          <Type>Group</Type>
+          <Caption>Layout</Caption>
+          <Alias>backgroundColour/layout</Alias>
+          <SortOrder>0</SortOrder>
+        </Tab>
+        <Tab>
+          <Id>101</Id>
+          <Key>1f14f84d-dcdf-436a-8cfc-2cf468ef51cc</Key>
+          <Type>Group</Type>
+          <Caption>Areas</Caption>
+          <Alias>backgroundColour/areas</Alias>
+          <SortOrder>1</SortOrder>
+        </Tab>
+        <Tab>
+          <Id>100</Id>
+          <Key>603cc05f-e067-44d4-9132-f9564ea83301</Key>
+          <Type>Tab</Type>
+          <Caption>Background Colour</Caption>
+          <Alias>backgroundColour</Alias>
+          <SortOrder>10</SortOrder>
+        </Tab>
+      </Tabs>
+      <HistoryCleanupPolicy preventCleanup="false" />
+    </DocumentType>
+    <DocumentType Folders="Layout+Settings/Layout+Settings+Components" FolderKeys="272bf4da-8e08-4642-ae4c-1c090ad2b7ce/3f805f0d-4b87-4547-bd5f-9737887a2a1e">
+      <Info>
+        <Name>Layout Settings Component - Background Image</Name>
+        <Alias>layoutSettingsComponentBackgroundImage</Alias>
+        <Key>4ca076c4-5e7f-42b3-8c18-b25afdcf0647</Key>
+        <Icon>icon-science</Icon>
+        <Thumbnail>folder.png</Thumbnail>
+        <Description />
+        <AllowAtRoot>False</AllowAtRoot>
+        <IsListView>False</IsListView>
+        <IsElement>True</IsElement>
+        <Variations>Nothing</Variations>
+        <Compositions />
+        <AllowedTemplates />
+        <DefaultTemplate></DefaultTemplate>
+      </Info>
+      <Structure />
+      <GenericProperties>
+        <GenericProperty>
+          <Name>Layout Settings Background Image Picker</Name>
+          <Alias>layoutSettingsBackgroundImagePicker</Alias>
+          <Key>8bfb2fb3-068a-4603-b6d9-596f8b03bb59</Key>
+          <Type>Umbraco.MediaPicker3</Type>
+          <Definition>ad9f0cf2-bda2-45d5-9ea1-a63cfc873fd3</Definition>
+          <Tab Alias="backgroundImage">Background Image</Tab>
+          <SortOrder>0</SortOrder>
+          <Mandatory>False</Mandatory>
+          <LabelOnTop>True</LabelOnTop>
+          <MandatoryMessage></MandatoryMessage>
+          <Validation></Validation>
+          <ValidationRegExpMessage></ValidationRegExpMessage>
+          <Description><![CDATA[]]></Description>
+          <Variations>Nothing</Variations>
+        </GenericProperty>
+      </GenericProperties>
+      <Tabs>
+        <Tab>
+          <Id>99</Id>
+          <Key>b713e7d3-e812-4190-94b8-ac9c81bdaec7</Key>
+          <Type>Tab</Type>
+          <Caption>Background Image</Caption>
+          <Alias>backgroundImage</Alias>
+          <SortOrder>20</SortOrder>
+        </Tab>
+      </Tabs>
+      <HistoryCleanupPolicy preventCleanup="false" />
+    </DocumentType>
+  </DocumentTypes>
+  <MediaTypes />
+  <Templates />
+  <Stylesheets />
+  <Scripts />
+  <PartialViews>
+    <View path="blockgrid\form.cshtml"><![CDATA[@using Umbraco.Community.BlockPreview.Extensions
+@using Project1.Controllers
+@using Our.Umbraco.TagHelpers
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<Umbraco.Cms.Core.Models.Blocks.BlockGridItem>
+
+@{
+    var  dataAreas = "";
+    foreach (var area in Model.Areas)
+    {
+        dataAreas += area.Alias + " ";
+    }
+    var formSettings = (dynamic)Model.Settings;
+}
+<!-- START - AREAS -->
+<div class="areas grid container" data-areas="@dataAreas" data-ContentUdi="@Model.ContentUdi" data-Content="@Model.Content" data-GridColumns="@Model.GridColumns">
+    <!-- Form wrapper -->
+    @using (Html.BeginUmbracoForm<FormsSurfaceController>((string)formSettings.FormAction, null, new { @class = "g-col-12 needs-validation", action = formSettings.FormAction }, FormMethod.Post))
+    {
+        <legend our-if="@formSettings != null && @formSettings.FormDisplayLegend">@formSettings.FormTitle</legend>
+        @foreach (var area in Model.Areas)
+        {
+            @await Html.GetPreviewBlockGridItemAreaHtmlAsync(area)
+        }
+    }
+    <!-- end Form wrapper -->
+</div>
+<!-- END - AREAS -->
+
+]]></View>
+  </PartialViews>
+  <Macros />
+  <MacroPartialViews />
+  <DictionaryItems />
+  <Languages />
+  <DataTypes>
+    <DataType Name="Form Control - DateTime Type - Dropdown" Id="Umbraco.DropDown.Flexible" Definition="75841b98-13ce-4a45-bea1-1bd6072d0518" DatabaseType="Nvarchar" Configuration="{&quot;multiple&quot;:false,&quot;items&quot;:[{&quot;id&quot;:1,&quot;value&quot;:&quot;date&quot;},{&quot;id&quot;:2,&quot;value&quot;:&quot;time&quot;},{&quot;id&quot;:3,&quot;value&quot;:&quot;datetime-local&quot;},{&quot;id&quot;:4,&quot;value&quot;:&quot;month&quot;},{&quot;id&quot;:5,&quot;value&quot;:&quot;week&quot;}]}" />
+    <DataType Name="Form Control - KeyValue Pair" Id="Umbraco.BlockList" Definition="cd35c0a9-fe1b-43e1-8ae2-a2223f8f948a" DatabaseType="Ntext" Configuration="{&quot;blocks&quot;:[{&quot;contentElementTypeKey&quot;:&quot;603a9bf5-88d2-4adb-aa37-b180e0c66605&quot;,&quot;label&quot;:&quot;{{itemKey}}&quot;,&quot;editorSize&quot;:&quot;medium&quot;,&quot;forceHideContentEditorInOverlay&quot;:false}],&quot;validationLimit&quot;:{},&quot;useSingleBlockMode&quot;:false,&quot;useLiveEditing&quot;:false,&quot;useInlineEditingAsDefault&quot;:false}" />
+    <DataType Name="Form Control - Text Input Type - Dropdown" Id="Umbraco.DropDown.Flexible" Definition="59dac83e-a594-4c08-bf67-be92e1e738cc" DatabaseType="Nvarchar" Configuration="{&quot;multiple&quot;:false,&quot;items&quot;:[{&quot;id&quot;:1,&quot;value&quot;:&quot;text&quot;},{&quot;id&quot;:2,&quot;value&quot;:&quot;number&quot;},{&quot;id&quot;:3,&quot;value&quot;:&quot;email&quot;},{&quot;id&quot;:4,&quot;value&quot;:&quot;password&quot;},{&quot;id&quot;:5,&quot;value&quot;:&quot;url&quot;},{&quot;id&quot;:6,&quot;value&quot;:&quot;tel&quot;},{&quot;id&quot;:7,&quot;value&quot;:&quot;hidden&quot;}]}" />
+    <DataType Name="Form Settings - Form Display Legend - Toggle" Id="Umbraco.TrueFalse" Definition="2d0ccd41-ded8-42df-ba26-faf83662df44" DatabaseType="Integer" Configuration="{&quot;default&quot;:false,&quot;showLabels&quot;:false}" />
+    <DataType Name="Form Settings - Form Layout Columns - Numeric" Id="Umbraco.Integer" Definition="5f4d255f-7377-4b97-b832-71c0a98e4d39" DatabaseType="Integer" Configuration="{&quot;min&quot;:1,&quot;step&quot;:1,&quot;max&quot;:3}" />
+    <DataType Name="Layout Settings Component - Background Color - Areas Background Colour - Color Picker" Id="Umbraco.ColorPicker" Definition="5dfe5dfe-e561-4f1a-ab7a-0d13f44bacd6" DatabaseType="Nvarchar" Configuration="{&quot;useLabel&quot;:true,&quot;items&quot;:[{&quot;id&quot;:1,&quot;value&quot;:&quot;{\&quot;value\&quot;:\&quot;0d6efd\&quot;,\&quot;label\&quot;:\&quot;text-bg-primary\&quot;}&quot;},{&quot;id&quot;:2,&quot;value&quot;:&quot;{\&quot;value\&quot;:\&quot;6c757d\&quot;,\&quot;label\&quot;:\&quot;text-bg-secondary\&quot;}&quot;},{&quot;id&quot;:3,&quot;value&quot;:&quot;{\&quot;value\&quot;:\&quot;198754\&quot;,\&quot;label\&quot;:\&quot;text-bg-success\&quot;}&quot;},{&quot;id&quot;:4,&quot;value&quot;:&quot;{\&quot;value\&quot;:\&quot;dc3545\&quot;,\&quot;label\&quot;:\&quot;text-bg-danger\&quot;}&quot;},{&quot;id&quot;:5,&quot;value&quot;:&quot;{\&quot;value\&quot;:\&quot;ffc107\&quot;,\&quot;label\&quot;:\&quot;text-bg-warning\&quot;}&quot;},{&quot;id&quot;:6,&quot;value&quot;:&quot;{\&quot;value\&quot;:\&quot;0dcaf0\&quot;,\&quot;label\&quot;:\&quot;text-bg-info\&quot;}&quot;},{&quot;id&quot;:7,&quot;value&quot;:&quot;{\&quot;value\&quot;:\&quot;f8f9fa\&quot;,\&quot;label\&quot;:\&quot;text-bg-light\&quot;}&quot;},{&quot;id&quot;:8,&quot;value&quot;:&quot;{\&quot;value\&quot;:\&quot;212529\&quot;,\&quot;label\&quot;:\&quot;text-bg-dark\&quot;}&quot;}]}" />
+    <DataType Name="Layout Settings Component - Color Picker - layoutSettingsColourOpacity - Slider" Id="Umbraco.Slider" Definition="c422ac53-3f46-46d7-b9d0-7057fb460bfb" DatabaseType="Nvarchar" Configuration="{&quot;enableRange&quot;:false,&quot;initVal1&quot;:1.0,&quot;initVal2&quot;:1.0,&quot;minVal&quot;:0.0,&quot;maxVal&quot;:1.0,&quot;step&quot;:0.125}" />
+    <DataType Name="Layout Settings Component - Color Picker - layoutSettingsColourShades - Slider" Id="Umbraco.Slider" Definition="18924646-4e3c-4e34-8c12-5078e818a484" DatabaseType="Nvarchar" Configuration="{&quot;enableRange&quot;:false,&quot;initVal1&quot;:500.0,&quot;initVal2&quot;:500.0,&quot;minVal&quot;:100.0,&quot;maxVal&quot;:900.0,&quot;step&quot;:100.0}" />
+    <DataType Name="Form Control - Alignment - Dropdown" Id="Umbraco.DropDown.Flexible" Definition="9b5dbc28-b105-4c53-8d4b-185f8e4403af" DatabaseType="Nvarchar" Configuration="{&quot;multiple&quot;:false,&quot;items&quot;:[{&quot;id&quot;:1,&quot;value&quot;:&quot;Horizontal&quot;},{&quot;id&quot;:2,&quot;value&quot;:&quot;Vertical&quot;}]}" />
+  </DataTypes>
+  <MediaItems />
+</umbPackage>

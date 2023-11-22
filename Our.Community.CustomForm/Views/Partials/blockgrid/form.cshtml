@@ -1,0 +1,29 @@
+﻿@using Umbraco.Community.BlockPreview.Extensions
+
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<Umbraco.Cms.Core.Models.Blocks.BlockGridItem>
+
+@{
+    var  dataAreas = "";
+    foreach (var area in Model.Areas)
+    {
+        dataAreas += area.Alias + " ";
+    }
+    var formSettings = Model.Settings;
+    var formaction = formSettings.Value<string>("formAction");
+    var displayLegend = formSettings.Value<bool>("formDisplayLegend");
+}
+<!-- START - AREAS -->
+<div class="areas grid container" data-areas="@dataAreas" data-ContentUdi="@Model.ContentUdi" data-Content="@Model.Content" data-GridColumns="@Model.GridColumns">
+    <!-- Form wrapper -->
+    <form action="@formaction" class="g-col-12 needs-validation" method="post">
+        <legend our-if="@formSettings != null && @displayLegend">@formSettings.Value("formTitle")</legend>
+        @foreach (var area in Model.Areas)
+        {
+            @await Html.GetPreviewBlockGridItemAreaHtmlAsync(area)
+        }
+    </form>
+
+    <!-- end Form wrapper -->
+</div>
+<!-- END - AREAS -->
+

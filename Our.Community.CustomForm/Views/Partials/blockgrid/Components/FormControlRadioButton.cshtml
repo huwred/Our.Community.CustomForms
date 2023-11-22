@@ -1,0 +1,37 @@
+﻿@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<Umbraco.Cms.Core.Models.Blocks.BlockGridItem>
+@using ContentModels = Umbraco.Cms.Web.Common.PublishedModels;
+@{
+    Layout = "_Layout_Features.cshtml";
+
+    string id = Model.Settings.Value<string>("formControlId").Replace(" ", "-", StringComparison.InvariantCulture);
+    string name = Model.Settings.Value<string>("formControlId").Replace(" ", "", StringComparison.InvariantCulture);
+    string required = Model.Settings.Value<bool>("formControlRequired") ? "required" : "";
+    var extraClass = Model.Settings.Value<string>("formControlClass");
+    var errMessage = Model.Settings.Value<string>("formControlErrorMessage");
+    var label = Model.Settings.Value<string>("formControlLabel");
+    string ariaId = "help_" + name;
+
+    var field = Model.Content;
+
+    var helptext = field.Value<string>("formControlHelpText");
+    var dir = Model.Settings.Value<string>("formControlLayout") == "Vertical" ? "" : "form-check-inline";
+
+}
+<div class="mb-2 mt-1 ">
+    <label for="@id" class="form-label mr-2">@label</label>
+    @{
+        int i = 0;
+        foreach (var block in field.Value<Umbraco.Cms.Core.Models.Blocks.BlockListModel>("formControlItems"))
+        {
+            var rId = id + $"_{i++}";
+            var data = block.Content;
+            <div class="form-check @dir mb-2">
+                <input aria-describedby="@ariaId" class="form-check-input" type="radio" name="@name" id="@rId" value="@data.Value("itemValue")" @required>
+                <label class="form-check-label" for="@rId">@data.Value("itemKey")</label>
+            </div>
+        }
+    }
+    <small id="@ariaId" class="form-text text-muted" our-if="!string.IsNullOrWhiteSpace(helptext)">@helptext</small>
+    <div class="invalid-feedback">@errMessage</div>
+</div>
+

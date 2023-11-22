@@ -1,0 +1,53 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Razor">
+  <PropertyGroup>
+    <TargetFrameworks>net7.0;net6.0</TargetFrameworks>
+    <Version>1.0.0-rc11</Version>
+    <ContentTargetFolders>.</ContentTargetFolders>
+    <Product>Our.Community.CustomForm</Product>
+    <PackageId>Our.Community.CustomForm</PackageId>
+    <Title>Our.Community.CustomForm</Title>
+    <Description>...</Description>
+    <PackageTags>umbraco plugin package</PackageTags>
+  </PropertyGroup>
+
+  <ItemGroup Condition="$(TargetFramework) == 'net6.0'">
+    <PackageReference Include="Microsoft.Maui.Graphics" Version="8.0.3" />
+    <PackageReference Include="Microsoft.Maui.Graphics.Skia" Version="8.0.3" />
+    <PackageReference Include="Our.Umbraco.TagHelpers" Version="1.2.0" />
+    <PackageReference Include="Umbraco.Cms.Web.Website" Version="10.6.0" />
+    <PackageReference Include="Umbraco.Cms.Web.BackOffice" Version="10.6.0" />
+    <PackageReference Include="Umbraco.Community.BlockPreview" Version="1.7.1" />
+  </ItemGroup>
+  <ItemGroup Condition="$(TargetFramework) == 'net7.0'">
+    <PackageReference Include="Microsoft.Maui.Graphics" Version="8.0.3" />
+    <PackageReference Include="Microsoft.Maui.Graphics.Skia" Version="8.0.3" />
+    <PackageReference Include="Our.Umbraco.TagHelpers" Version="1.2.0" />
+    <PackageReference Include="Umbraco.Cms.Web.Website" Version="12.0.0" />
+    <PackageReference Include="Umbraco.Cms.Web.BackOffice" Version="12.0.0" />
+    <PackageReference Include="Umbraco.Community.BlockPreview" Version="1.7.1" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Plugins\Our.Community.CustomForm\**" ExcludeFromSingleFile="true" CopyToPublishDirectory="PreserveNewest" />
+    
+    <!--<Content Include="Views\**" ExcludeFromSingleFile="true" CopyToPublishDirectory="PreserveNewest" />-->
+    <None Include="build\**" Pack="true" PackagePath="buildTransitive" />
+  <None Include="views\**">
+    <Pack>true</Pack>
+    <PackagePath>Views</PackagePath>
+  </None>
+  <None Include="build\**">
+    <Pack>true</Pack>
+    <PackagePath>buildTransitive</PackagePath>
+  </None>  
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <None Remove="Views\_ViewImports.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\package.xml" />
+  </ItemGroup>
+
+</Project>
