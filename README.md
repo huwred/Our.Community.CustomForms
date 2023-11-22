@@ -2,6 +2,7 @@
 To use this package you need to be using the UmBootstrap template for Umbraco.
 
 The package installs some document types to enable the creation of custom forms for UmBootstrap using the BlockGrid.
+
 ![Example custom form](images/customform.png)
 
 ## After Installing the package
