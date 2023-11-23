@@ -11,6 +11,7 @@
     <RepositoryUrl>https://github.com/huwred/Our.Community.CustomForms</RepositoryUrl>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageReadmeFile>readme.md</PackageReadmeFile>
+    <PackageIcon>icon.png</PackageIcon>
   </PropertyGroup>
 
   <ItemGroup Condition="$(TargetFramework) == 'net6.0'">
@@ -41,9 +42,7 @@
       <PackagePath>buildTransitive</PackagePath>
     </None>  
   </ItemGroup>
-  <PropertyGroup>
-      <PackageIcon>icon.png</PackageIcon>
-  </PropertyGroup>
+
   <ItemGroup>
     <None Include=".\icon.png" Pack="true" PackagePath="\" />
     <None Include=".\readme.md" Pack="true" PackagePath="\" />
