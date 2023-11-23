@@ -29,10 +29,5 @@
         }
     ],
     "Tags": ["Packages", "umbraco", "bootstrap", "umbraco-marketplace"],
-    "Title": "",
-    "VersionSpecificPackageIds": [{
-        "UmbracoMajorVersion": 10,
-        "PackageId": "Our.Community.CustomForm"
-    }],
-    "VideoUrl": ""
+    "Title": ""
 }
