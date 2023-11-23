@@ -1,13 +1,16 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk.Razor">
   <PropertyGroup>
     <TargetFrameworks>net7.0;net6.0</TargetFrameworks>
-    <Version>1.0.0</Version>
+    <Version>1.0.2</Version>
     <ContentTargetFolders>.</ContentTargetFolders>
     <Product>Our.Community.CustomForm</Product>
     <PackageId>Our.Community.CustomForm</PackageId>
     <Title>Our.Community.CustomForm</Title>
-    <Description>...</Description>
-    <PackageTags>umbraco plugin package</PackageTags>
+    <Description>Custom forms add-on for UmBootstrap</Description>
+    <PackageTags>umbraco-marketplace umbraco plugin package</PackageTags>
+    <RepositoryUrl>https://github.com/huwred/Our.Community.CustomForms</RepositoryUrl>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageReadmeFile>readme.md</PackageReadmeFile>
   </PropertyGroup>
 
   <ItemGroup Condition="$(TargetFramework) == 'net6.0'">
@@ -28,19 +31,23 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Plugins\Our.Community.CustomForm\**" ExcludeFromSingleFile="true" CopyToPublishDirectory="PreserveNewest" />
-    
-    <!--<Content Include="Views\**" ExcludeFromSingleFile="true" CopyToPublishDirectory="PreserveNewest" />-->
     <None Include="build\**" Pack="true" PackagePath="buildTransitive" />
-  <None Include="views\**">
-    <Pack>true</Pack>
-    <PackagePath>Views</PackagePath>
-  </None>
-  <None Include="build\**">
-    <Pack>true</Pack>
-    <PackagePath>buildTransitive</PackagePath>
-  </None>  
+    <None Include="views\**">
+      <Pack>true</Pack>
+      <PackagePath>Views</PackagePath>
+    </None>
+    <None Include="build\**">
+      <Pack>true</Pack>
+      <PackagePath>buildTransitive</PackagePath>
+    </None>  
   </ItemGroup>
-
+  <PropertyGroup>
+      <PackageIcon>icon.png</PackageIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Include=".\icon.png" Pack="true" PackagePath="\" />
+    <None Include=".\readme.md" Pack="true" PackagePath="\" />
+  </ItemGroup>
 
   <ItemGroup>
     <None Remove="Views\_ViewImports.cshtml" />
