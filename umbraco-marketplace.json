@@ -6,22 +6,33 @@
         "Description": "Umbraco MVP, .Net developer",
         "Url": "https://our.umbraco.com/members/huwred/",
         "ImageUrl": "https://our.umbraco.com/media/upload/af865e33-184c-4930-a90b-93b05c2a4d0c/me.jpg?width=250&height=250&mode=crop&upscale=true"
-    
-      },
+
+    },
     "Category": "Editor Tools",
     "Description": "Adds a custom Form Blockgrid control for sites using the UmBootstrap Starter Kit",
     "DocumentationUrl": "https://github.com/huwred/Our.Community.CustomForms",
-    "LicenseTypes": [ "Free" ],
+    "LicenseTypes": ["Free"],
     "IssueTrackerUrl": "https://github.com/huwred/Our.Community.CustomForms/issues",
     "IsSubPackageOf": "",
     "PackageType": "Package",
-    "Tags": [ "Packages","umbraco","bootstrap","umbraco-marketplace"],
+    "Screenshots": [{
+            "ImageUrl": "https://raw.githubusercontent.com/huwred/Our.Community.CustomForms/main/images/formcontrolblocks.png",
+            "Caption": "Custom Form Controls"
+        },
+        {
+            "ImageUrl": "https://raw.githubusercontent.com/huwred/Our.Community.CustomForms/main/images/formlayouteditor.png",
+            "Caption": "Custom Form BlockGrid Property Editor"
+        },
+        {
+            "ImageUrl": "https://raw.githubusercontent.com/huwred/Our.Community.CustomForms/main/images/formsettings.png",
+            "Caption": "Custom Form BlockGrid Settings Editor"
+        }
+    ],
+    "Tags": ["Packages", "umbraco", "bootstrap", "umbraco-marketplace"],
     "Title": "",
-    "VersionSpecificPackageIds": [
-      {
+    "VersionSpecificPackageIds": [{
         "UmbracoMajorVersion": 10,
         "PackageId": "Our.Community.CustomForm"
-      }
-    ],
+    }],
     "VideoUrl": ""
-  }
+}
